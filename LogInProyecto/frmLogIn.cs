@@ -25,18 +25,19 @@ namespace LogInProyecto
 			if (textBox1.Text == "User" && textBox2.Text == "123")
 			{
 				menu.Show();
+
 			}
 			else
 			{
 				if (textBox1.Text == "caja" && textBox2.Text == "123")
 				{
 					menu.Show();
+					this.Visible = false;
 				}
 				else
 				{
 					MessageBox.Show("Usuario ó contraseña inválida.");
 				}
-				this.Close();
 			}
 		}
 
