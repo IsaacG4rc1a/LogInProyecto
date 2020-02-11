@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LogInProyecto.Properties;
+using System.Runtime.InteropServices;
 
 namespace LogInProyecto
 {
@@ -26,7 +28,7 @@ namespace LogInProyecto
 			}
 			else
 			{
-				if (textBox1.Text == "caja" && textBox2.Text == "12")
+				if (textBox1.Text == "caja" && textBox2.Text == "123")
 				{
 					menu.Show();
 				}
@@ -34,14 +36,17 @@ namespace LogInProyecto
 				{
 					MessageBox.Show("Usuario ó contraseña inválida.");
 				}
+				this.Close();
 			}
-			frmLogIn frm = new frmLogIn();
-			frm.Close();
 		}
 
 		private void frmLogIn_Load(object sender, EventArgs e)
 		{
+			textBox1.AutoSize = false;
+			textBox1.Size = new Size(326, 35);
 
+			textBox2.AutoSize = false;
+			textBox2.Size = new Size(326, 35);
 		}
 
 		private void label3_Click(object sender, EventArgs e)
@@ -74,5 +79,18 @@ namespace LogInProyecto
 				textBox2.Text = text;
 			}
 		}
+
+		//Botón cerrar 
+		private void pictureBox1_Click(object sender, EventArgs e)
+		{
+			this.Close();
+		}
+
+		//Boton Minimizar
+		private void pictureBox2_Click(object sender, EventArgs e)
+		{
+			WindowState = FormWindowState.Minimized;
+		}
+		
 	}
 }
