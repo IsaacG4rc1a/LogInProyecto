@@ -35,7 +35,8 @@ namespace LogInProyecto
 					MessageBox.Show("Usuario ó contraseña inválida.");
 				}
 			}
-			
+			frmLogIn frm = new frmLogIn();
+			frm.Close();
 		}
 
 		private void frmLogIn_Load(object sender, EventArgs e)
