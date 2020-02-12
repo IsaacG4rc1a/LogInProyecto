@@ -25,6 +25,7 @@ namespace LogInProyecto
 			if (textBox1.Text == "User" && textBox2.Text == "123")
 			{
 				menu.Show();
+				this.Visible = false;
 
 			}
 			else

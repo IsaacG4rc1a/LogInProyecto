@@ -76,6 +76,7 @@
 			this.asignaturasToolStripMenuItem.Name = "asignaturasToolStripMenuItem";
 			this.asignaturasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.asignaturasToolStripMenuItem.Text = "Asignaturas";
+			this.asignaturasToolStripMenuItem.Click += new System.EventHandler(this.asignaturasToolStripMenuItem_Click);
 			// 
 			// alumnosToolStripMenuItem
 			// 
@@ -110,12 +111,13 @@
 			// 
 			this.logInToolStripMenuItem.Name = "logInToolStripMenuItem";
 			this.logInToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-			this.logInToolStripMenuItem.Text = "LogIn";
+			this.logInToolStripMenuItem.Text = "Cerrar sesión";
+			this.logInToolStripMenuItem.Click += new System.EventHandler(this.logInToolStripMenuItem_Click);
 			// 
 			// usuariosToolStripMenuItem
 			// 
 			this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-			this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
 			this.usuariosToolStripMenuItem.Text = "Usuarios";
 			// 
 			// frmMenu
