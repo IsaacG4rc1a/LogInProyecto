@@ -12,7 +12,6 @@ namespace LogInProyecto
 {
 	public partial class frmMenu : Form
 	{
-		frmLogIn frmLogin = new frmLogIn();
 		public frmMenu()
 		{
 			InitializeComponent();
@@ -37,6 +36,7 @@ namespace LogInProyecto
 
 		private void logInToolStripMenuItem_Click(object sender, EventArgs e)
 		{
+			frmLogIn frmLogin = new frmLogIn();
 			this.Close();
 			frmLogin.Show();
 		}

@@ -9,11 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LogInProyecto.Properties;
 using System.Runtime.InteropServices;
+using Universidad.BL;
 
 namespace LogInProyecto
 {
 	public partial class frmLogIn : Form
 	{
+		bool cerrar = false;
+		
 		public frmLogIn()
 		{
 			InitializeComponent();
@@ -21,24 +24,20 @@ namespace LogInProyecto
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			frmMenu menu = new frmMenu();
-			if (textBox1.Text == "User" && textBox2.Text == "123")
-			{
-				menu.Show();
-				this.Visible = false;
+			var UniversidadBL = new UserValidation();
+			var User = textBox1.Text;
+			var pass = textBox2.Text;
 
+			if (UniversidadBL.Validar(User, pass) == true)
+			{
+				frmMenu menu = new frmMenu();
+				this.Hide();
+				menu.ShowDialog();
+				
 			}
 			else
 			{
-				if (textBox1.Text == "caja" && textBox2.Text == "123")
-				{
-					menu.Show();
-					this.Visible = false;
-				}
-				else
-				{
-					MessageBox.Show("Usuario ó contraseña inválida.");
-				}
+				MessageBox.Show("Usuario ó contraseña inválida.");
 			}
 		}
 
@@ -73,9 +72,13 @@ namespace LogInProyecto
 		}
 
 		//Botón cerrar 
-		private void pictureBox1_Click(object sender, EventArgs e)
+		private void pictureBox1_Click(object sender, EventArgs ex)
 		{
-			this.Close();
+			//	if (cerrar == false)
+			//	{
+			//		ex.Cancel = true;
+			//	}
+			Application.Exit();
 		}
 
 		//Boton Minimizar
