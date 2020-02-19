@@ -125,7 +125,7 @@
 			// 
 			// Titulo
 			// 
-			this.Titulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(38)))), ((int)(((byte)(70)))));
+			this.Titulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(97)))), ((int)(((byte)(238)))));
 			this.Titulo.Controls.Add(this.pictureBox2);
 			this.Titulo.Controls.Add(this.pictureBox1);
 			this.Titulo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -133,6 +133,7 @@
 			this.Titulo.Name = "Titulo";
 			this.Titulo.Size = new System.Drawing.Size(378, 33);
 			this.Titulo.TabIndex = 8;
+			this.Titulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Titulo_MouseDown_1);
 			// 
 			// pictureBox2
 			// 
