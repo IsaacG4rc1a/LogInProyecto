@@ -16,6 +16,7 @@ namespace LogInProyecto
 		public frmMenu()
 		{
 			InitializeComponent();
+			OcultarMenus();
 		}
 
 		private void frmMenu_Load(object sender, EventArgs e)
@@ -36,8 +37,7 @@ namespace LogInProyecto
 
 		private void btnAsignaturas_Click(object sender, EventArgs e)
 		{
-			frmAlumnos alum = new frmAlumnos();
-			alum.ShowDialog();
+			
 		}
 
 		[DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -58,5 +58,89 @@ namespace LogInProyecto
 			this.Hide();
 			frmLogin.Show();
 		}
+
+		private void lblSalir_Click(object sender, EventArgs e)
+		{
+			frmLogIn frmLogin = new frmLogIn();
+			this.Hide();
+			frmLogin.Show();
+		}
+
+		private void btnAlumnos_Click(object sender, EventArgs e)
+		{
+			OcultarMenus();
+			AbrirfrmHijo(new frmAlumnos());
+		}
+
+		//#1 Bloque de código para mostrar y ocultar los sub menus
+		private void OcultarMenus()
+		{
+			panelMantenimiento.Visible = false;
+			panelReportes.Visible = false;
+			panelSeguridad.Visible = false;
+		}
+
+		private void cerarSubmenus()
+		{
+			if (panelMantenimiento.Visible == true)
+			{
+				panelMantenimiento.Visible = false;
+			}
+			if (panelReportes.Visible == true)
+			{
+				panelMantenimiento.Visible = false;
+			}
+			if (panelSeguridad.Visible == true)
+			{
+				panelMantenimiento.Visible = false;
+			}
+		}
+
+		private void MostarSubMenu(Panel SubMenu)
+		{
+			if (SubMenu.Visible == false)
+			{
+				OcultarMenus();
+				SubMenu.Visible = true;
+			}
+			else
+			{
+				SubMenu.Visible = false;
+			}
+		}
+
+		private void btnMantenimiento_Click(object sender, EventArgs e)
+		{
+			MostarSubMenu(panelMantenimiento);
+		}
+
+		private void btnSeguridad_Click(object sender, EventArgs e)
+		{
+			MostarSubMenu(panelSeguridad);
+		}
+
+		private void btnReportes_Click(object sender, EventArgs e)
+		{
+			MostarSubMenu(panelReportes);
+		}
+		//#1 Final 
+
+		//#2 Bloque de código para abrir un  formulario dentro de otro.
+		private Form FrmActivo = null;
+		private void AbrirfrmHijo(Form frmHijo)
+		{
+			if (FrmActivo != null)
+				FrmActivo.Close();
+			FrmActivo = frmHijo;
+			frmHijo.TopLevel = false;
+			frmHijo.Dock = DockStyle.Fill;
+			PanelContenedor.Controls.Add(frmHijo);
+			PanelContenedor.Tag = frmHijo;
+			frmHijo.BringToFront();
+			frmHijo.Show();
+		}
+		// Final #2
+
+
 	}
 }
