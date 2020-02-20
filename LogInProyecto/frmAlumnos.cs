@@ -20,6 +20,7 @@ namespace LogInProyecto
 
 			var AluBL = new AlumnosBL();
 			alumnosListaBindingSource.DataSource = AluBL.ListaAlumno;
+			idTextBox.Enabled = false;
 		}
 
 		[DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
