@@ -33,19 +33,20 @@
 			this.btnMin = new System.Windows.Forms.PictureBox();
 			this.btnCerrar = new System.Windows.Forms.PictureBox();
 			this.MenuVertical = new System.Windows.Forms.Panel();
+			this.btnSalir = new System.Windows.Forms.PictureBox();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.Logo = new System.Windows.Forms.PictureBox();
 			this.btnAsignaturas = new System.Windows.Forms.Button();
 			this.PanelContenedor = new System.Windows.Forms.Panel();
-			this.btnSalir = new System.Windows.Forms.PictureBox();
 			this.label1 = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
 			this.BarraTitulo.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.btnMin)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
 			this.MenuVertical.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
 			this.PanelContenedor.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// BarraTitulo
@@ -89,6 +90,7 @@
 			// MenuVertical
 			// 
 			this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+			this.MenuVertical.Controls.Add(this.label2);
 			this.MenuVertical.Controls.Add(this.btnSalir);
 			this.MenuVertical.Controls.Add(this.panel1);
 			this.MenuVertical.Controls.Add(this.Logo);
@@ -98,6 +100,18 @@
 			this.MenuVertical.Name = "MenuVertical";
 			this.MenuVertical.Size = new System.Drawing.Size(169, 530);
 			this.MenuVertical.TabIndex = 1;
+			// 
+			// btnSalir
+			// 
+			this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+			this.btnSalir.Location = new System.Drawing.Point(0, 476);
+			this.btnSalir.Name = "btnSalir";
+			this.btnSalir.Size = new System.Drawing.Size(61, 54);
+			this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.btnSalir.TabIndex = 0;
+			this.btnSalir.TabStop = false;
+			this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
 			// 
 			// panel1
 			// 
@@ -144,17 +158,6 @@
 			this.PanelContenedor.Size = new System.Drawing.Size(839, 530);
 			this.PanelContenedor.TabIndex = 2;
 			// 
-			// btnSalir
-			// 
-			this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
-			this.btnSalir.Location = new System.Drawing.Point(0, 476);
-			this.btnSalir.Name = "btnSalir";
-			this.btnSalir.Size = new System.Drawing.Size(61, 54);
-			this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-			this.btnSalir.TabIndex = 0;
-			this.btnSalir.TabStop = false;
-			this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-			// 
 			// label1
 			// 
 			this.label1.AutoSize = true;
@@ -165,6 +168,18 @@
 			this.label1.Size = new System.Drawing.Size(550, 33);
 			this.label1.TabIndex = 2;
 			this.label1.Text = "MENÚ PRINCIPAL - SISTEMA DE MATRÍCULA";
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.BackColor = System.Drawing.Color.Transparent;
+			this.label2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label2.ForeColor = System.Drawing.Color.Transparent;
+			this.label2.Location = new System.Drawing.Point(63, 495);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(90, 17);
+			this.label2.TabIndex = 3;
+			this.label2.Text = "Cerrar sesión";
 			// 
 			// frmMenu
 			// 
@@ -183,10 +198,11 @@
 			((System.ComponentModel.ISupportInitialize)(this.btnMin)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
 			this.MenuVertical.ResumeLayout(false);
+			this.MenuVertical.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
 			this.PanelContenedor.ResumeLayout(false);
 			this.PanelContenedor.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -203,6 +219,7 @@
 		private System.Windows.Forms.Button btnAsignaturas;
 		private System.Windows.Forms.PictureBox btnSalir;
 		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label label2;
 	}
 }
 
