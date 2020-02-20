@@ -33,17 +33,19 @@
 			this.btnMin = new System.Windows.Forms.PictureBox();
 			this.btnCerrar = new System.Windows.Forms.PictureBox();
 			this.MenuVertical = new System.Windows.Forms.Panel();
-			this.panel2 = new System.Windows.Forms.Panel();
-			this.btnCerrarSesion = new System.Windows.Forms.Button();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.Logo = new System.Windows.Forms.PictureBox();
 			this.btnAsignaturas = new System.Windows.Forms.Button();
 			this.PanelContenedor = new System.Windows.Forms.Panel();
+			this.btnSalir = new System.Windows.Forms.PictureBox();
+			this.label1 = new System.Windows.Forms.Label();
 			this.BarraTitulo.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.btnMin)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
 			this.MenuVertical.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
+			this.PanelContenedor.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// BarraTitulo
@@ -87,8 +89,7 @@
 			// MenuVertical
 			// 
 			this.MenuVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-			this.MenuVertical.Controls.Add(this.panel2);
-			this.MenuVertical.Controls.Add(this.btnCerrarSesion);
+			this.MenuVertical.Controls.Add(this.btnSalir);
 			this.MenuVertical.Controls.Add(this.panel1);
 			this.MenuVertical.Controls.Add(this.Logo);
 			this.MenuVertical.Controls.Add(this.btnAsignaturas);
@@ -97,30 +98,6 @@
 			this.MenuVertical.Name = "MenuVertical";
 			this.MenuVertical.Size = new System.Drawing.Size(169, 530);
 			this.MenuVertical.TabIndex = 1;
-			// 
-			// panel2
-			// 
-			this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-			this.panel2.Location = new System.Drawing.Point(2, 443);
-			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(8, 32);
-			this.panel2.TabIndex = 4;
-			// 
-			// btnCerrarSesion
-			// 
-			this.btnCerrarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-			this.btnCerrarSesion.FlatAppearance.BorderSize = 0;
-			this.btnCerrarSesion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-			this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnCerrarSesion.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnCerrarSesion.ForeColor = System.Drawing.Color.Transparent;
-			this.btnCerrarSesion.Location = new System.Drawing.Point(8, 443);
-			this.btnCerrarSesion.Name = "btnCerrarSesion";
-			this.btnCerrarSesion.Size = new System.Drawing.Size(161, 32);
-			this.btnCerrarSesion.TabIndex = 3;
-			this.btnCerrarSesion.Text = "Cerrar sesión";
-			this.btnCerrarSesion.UseVisualStyleBackColor = false;
-			this.btnCerrarSesion.Click += new System.EventHandler(this.btnCerrarSesion_Click);
 			// 
 			// panel1
 			// 
@@ -147,6 +124,8 @@
 			this.btnAsignaturas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnAsignaturas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnAsignaturas.ForeColor = System.Drawing.Color.Transparent;
+			this.btnAsignaturas.Image = ((System.Drawing.Image)(resources.GetObject("btnAsignaturas.Image")));
+			this.btnAsignaturas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.btnAsignaturas.Location = new System.Drawing.Point(8, 97);
 			this.btnAsignaturas.Name = "btnAsignaturas";
 			this.btnAsignaturas.Size = new System.Drawing.Size(161, 32);
@@ -158,11 +137,34 @@
 			// PanelContenedor
 			// 
 			this.PanelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+			this.PanelContenedor.Controls.Add(this.label1);
 			this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.PanelContenedor.Location = new System.Drawing.Point(169, 35);
 			this.PanelContenedor.Name = "PanelContenedor";
 			this.PanelContenedor.Size = new System.Drawing.Size(839, 530);
 			this.PanelContenedor.TabIndex = 2;
+			// 
+			// btnSalir
+			// 
+			this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+			this.btnSalir.Location = new System.Drawing.Point(0, 476);
+			this.btnSalir.Name = "btnSalir";
+			this.btnSalir.Size = new System.Drawing.Size(61, 54);
+			this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.btnSalir.TabIndex = 0;
+			this.btnSalir.TabStop = false;
+			this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.ForeColor = System.Drawing.Color.Transparent;
+			this.label1.Location = new System.Drawing.Point(150, 14);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(550, 33);
+			this.label1.TabIndex = 2;
+			this.label1.Text = "MENÚ PRINCIPAL - SISTEMA DE MATRÍCULA";
 			// 
 			// frmMenu
 			// 
@@ -182,6 +184,9 @@
 			((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
 			this.MenuVertical.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
+			this.PanelContenedor.ResumeLayout(false);
+			this.PanelContenedor.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -193,11 +198,11 @@
 		private System.Windows.Forms.PictureBox btnCerrar;
 		private System.Windows.Forms.PictureBox btnMin;
 		private System.Windows.Forms.PictureBox Logo;
-		private System.Windows.Forms.Button btnAsignaturas;
 		private System.Windows.Forms.Panel panel1;
-		private System.Windows.Forms.Panel panel2;
-		private System.Windows.Forms.Button btnCerrarSesion;
 		private System.Windows.Forms.Panel PanelContenedor;
+		private System.Windows.Forms.Button btnAsignaturas;
+		private System.Windows.Forms.PictureBox btnSalir;
+		private System.Windows.Forms.Label label1;
 	}
 }
 

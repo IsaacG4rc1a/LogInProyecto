@@ -40,13 +40,6 @@ namespace LogInProyecto
 			alum.ShowDialog();
 		}
 
-		private void btnCerrarSesion_Click(object sender, EventArgs e)
-		{
-			frmLogIn frmLogin = new frmLogIn();
-			this.Hide();
-			frmLogin.Show();
-		}
-
 		[DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
 		private extern static void ReleaseCapture();
 		[DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -57,6 +50,13 @@ namespace LogInProyecto
 		{
 			ReleaseCapture();
 			SendMessage(this.Handle, 0x112, 0xf012, 0);
+		}
+
+		private void btnSalir_Click(object sender, EventArgs e)
+		{
+			frmLogIn frmLogin = new frmLogIn();
+			this.Hide();
+			frmLogin.Show();
 		}
 	}
 }
