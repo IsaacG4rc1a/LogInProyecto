@@ -15,8 +15,6 @@ namespace LogInProyecto
 {
 	public partial class frmLogIn : Form
 	{
-		bool cerrar = false;
-		
 		public frmLogIn()
 		{
 			InitializeComponent();
@@ -74,10 +72,6 @@ namespace LogInProyecto
 		//Botón cerrar 
 		private void pictureBox1_Click(object sender, EventArgs ex)
 		{
-			//	if (cerrar == false)
-			//	{
-			//		ex.Cancel = true;
-			//	}
 			Application.Exit();
 		}
 
@@ -96,6 +90,18 @@ namespace LogInProyecto
 		private void textBox1_TextChanged(object sender, EventArgs e)
 		{
 
+		}
+
+		[DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+		private extern static void ReleaseCapture();
+		[DllImport("user32.DLL", EntryPoint = "SendMessage")]
+
+		private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+		private void Titulo_MouseDown_1(object sender, MouseEventArgs e)
+		{
+			ReleaseCapture();
+			SendMessage(this.Handle, 0x112, 0xf012, 0);
 		}
 	}
 }

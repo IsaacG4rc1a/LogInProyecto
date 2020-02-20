@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("LogInProyecto")]
+[assembly: AssemblyTitle("EntidadPropiedades")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("LogInProyecto")]
+[assembly: AssemblyProduct("EntidadPropiedades")]
 [assembly: AssemblyCopyright("Copyright ©  2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("c3cd1dd1-cfe4-4796-8977-c54c697f36eb")]
+[assembly: Guid("1ca8f75e-d4d0-4b4c-9a73-70e93af13fe7")]
 
 // Version information for an assembly consists of the following four values:
 //
