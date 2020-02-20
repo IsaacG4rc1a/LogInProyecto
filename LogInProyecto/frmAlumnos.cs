@@ -36,7 +36,7 @@ namespace LogInProyecto
 			SendMessage(this.Handle, 0x112, 0xf012, 0);
 		}
 
-		private void label1_Click(object sender, EventArgs e)
+		private void label1_Click_1(object sender, EventArgs e)
 		{
 			this.Close();
 		}
