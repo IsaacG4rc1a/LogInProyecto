@@ -34,7 +34,7 @@
 			this.btnCerrar = new System.Windows.Forms.PictureBox();
 			this.btnSalir = new System.Windows.Forms.PictureBox();
 			this.lblSalir = new System.Windows.Forms.Label();
-			this.panel2 = new System.Windows.Forms.Panel();
+			this.Logo = new System.Windows.Forms.Panel();
 			this.panelMantenimiento = new System.Windows.Forms.Panel();
 			this.btnMatricula = new System.Windows.Forms.Button();
 			this.btnCarreras = new System.Windows.Forms.Button();
@@ -54,6 +54,7 @@
 			this.label1 = new System.Windows.Forms.Label();
 			this.panel3 = new System.Windows.Forms.Panel();
 			this.PanelContenedor = new System.Windows.Forms.Panel();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.BarraTitulo.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.btnMin)).BeginInit();
@@ -64,6 +65,7 @@
 			this.panelReportes.SuspendLayout();
 			this.panelSeguridad.SuspendLayout();
 			this.PanelContenedor.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// BarraTitulo
@@ -130,13 +132,13 @@
 			this.lblSalir.Text = "Cerrar sesión";
 			this.lblSalir.Click += new System.EventHandler(this.lblSalir_Click);
 			// 
-			// panel2
+			// Logo
 			// 
-			this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-			this.panel2.Location = new System.Drawing.Point(0, 0);
-			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(180, 96);
-			this.panel2.TabIndex = 4;
+			this.Logo.Dock = System.Windows.Forms.DockStyle.Top;
+			this.Logo.Location = new System.Drawing.Point(0, 0);
+			this.Logo.Name = "Logo";
+			this.Logo.Size = new System.Drawing.Size(180, 96);
+			this.Logo.TabIndex = 4;
 			// 
 			// panelMantenimiento
 			// 
@@ -165,7 +167,7 @@
 			this.btnMatricula.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.btnMatricula.Location = new System.Drawing.Point(0, 137);
 			this.btnMatricula.Name = "btnMatricula";
-			this.btnMatricula.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+			this.btnMatricula.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
 			this.btnMatricula.Size = new System.Drawing.Size(180, 34);
 			this.btnMatricula.TabIndex = 4;
 			this.btnMatricula.Text = "Matrícula";
@@ -203,7 +205,7 @@
 			this.btnAlumnos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.btnAlumnos.Location = new System.Drawing.Point(0, 66);
 			this.btnAlumnos.Name = "btnAlumnos";
-			this.btnAlumnos.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+			this.btnAlumnos.Padding = new System.Windows.Forms.Padding(19, 0, 0, 0);
 			this.btnAlumnos.Size = new System.Drawing.Size(180, 35);
 			this.btnAlumnos.TabIndex = 2;
 			this.btnAlumnos.Text = "Alumnos";
@@ -242,7 +244,7 @@
 			this.btnAsignaturas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.btnAsignaturas.Location = new System.Drawing.Point(0, 0);
 			this.btnAsignaturas.Name = "btnAsignaturas";
-			this.btnAsignaturas.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+			this.btnAsignaturas.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
 			this.btnAsignaturas.Size = new System.Drawing.Size(180, 31);
 			this.btnAsignaturas.TabIndex = 0;
 			this.btnAsignaturas.Text = "Asignaturas";
@@ -258,7 +260,7 @@
 			this.MenuVertical.Controls.Add(this.btnSeguridad);
 			this.MenuVertical.Controls.Add(this.panelMantenimiento);
 			this.MenuVertical.Controls.Add(this.btnMantenimiento);
-			this.MenuVertical.Controls.Add(this.panel2);
+			this.MenuVertical.Controls.Add(this.Logo);
 			this.MenuVertical.Controls.Add(this.lblSalir);
 			this.MenuVertical.Controls.Add(this.btnSalir);
 			this.MenuVertical.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -392,14 +394,14 @@
 			this.btnSeguridad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnSeguridad.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnSeguridad.ForeColor = System.Drawing.Color.Transparent;
+			this.btnSeguridad.Image = ((System.Drawing.Image)(resources.GetObject("btnSeguridad.Image")));
 			this.btnSeguridad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.btnSeguridad.Location = new System.Drawing.Point(0, 305);
 			this.btnSeguridad.Name = "btnSeguridad";
-			this.btnSeguridad.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+			this.btnSeguridad.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
 			this.btnSeguridad.Size = new System.Drawing.Size(180, 39);
 			this.btnSeguridad.TabIndex = 17;
 			this.btnSeguridad.Text = "Seguridad";
-			this.btnSeguridad.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.btnSeguridad.UseVisualStyleBackColor = true;
 			this.btnSeguridad.Click += new System.EventHandler(this.btnSeguridad_Click);
 			// 
@@ -412,6 +414,7 @@
 			this.btnMantenimiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnMantenimiento.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnMantenimiento.ForeColor = System.Drawing.Color.Transparent;
+			this.btnMantenimiento.Image = ((System.Drawing.Image)(resources.GetObject("btnMantenimiento.Image")));
 			this.btnMantenimiento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.btnMantenimiento.Location = new System.Drawing.Point(0, 96);
 			this.btnMantenimiento.Name = "btnMantenimiento";
@@ -419,7 +422,6 @@
 			this.btnMantenimiento.Size = new System.Drawing.Size(180, 39);
 			this.btnMantenimiento.TabIndex = 15;
 			this.btnMantenimiento.Text = "Mantenimiento";
-			this.btnMantenimiento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.btnMantenimiento.UseVisualStyleBackColor = true;
 			this.btnMantenimiento.Click += new System.EventHandler(this.btnMantenimiento_Click);
 			// 
@@ -446,6 +448,7 @@
 			// PanelContenedor
 			// 
 			this.PanelContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
+			this.PanelContenedor.Controls.Add(this.pictureBox1);
 			this.PanelContenedor.Controls.Add(this.panel3);
 			this.PanelContenedor.Controls.Add(this.panel1);
 			this.PanelContenedor.Controls.Add(this.label1);
@@ -454,6 +457,19 @@
 			this.PanelContenedor.Name = "PanelContenedor";
 			this.PanelContenedor.Size = new System.Drawing.Size(828, 530);
 			this.PanelContenedor.TabIndex = 2;
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+			this.pictureBox1.Location = new System.Drawing.Point(156, 118);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(544, 337);
+			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+			this.pictureBox1.TabIndex = 0;
+			this.pictureBox1.TabStop = false;
 			// 
 			// panel1
 			// 
@@ -488,6 +504,7 @@
 			this.panelSeguridad.ResumeLayout(false);
 			this.PanelContenedor.ResumeLayout(false);
 			this.PanelContenedor.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 
 		}
@@ -499,7 +516,7 @@
 		private System.Windows.Forms.PictureBox btnMin;
 		private System.Windows.Forms.PictureBox btnSalir;
 		private System.Windows.Forms.Label lblSalir;
-		private System.Windows.Forms.Panel panel2;
+		private System.Windows.Forms.Panel Logo;
 		private System.Windows.Forms.Panel panelMantenimiento;
 		private System.Windows.Forms.Button btnCarreras;
 		private System.Windows.Forms.Button btnAlumnos;
@@ -520,6 +537,7 @@
 		private System.Windows.Forms.Panel panel3;
 		private System.Windows.Forms.Panel PanelContenedor;
 		private System.Windows.Forms.Panel panel1;
+		private System.Windows.Forms.PictureBox pictureBox1;
 	}
 }
 
