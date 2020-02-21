@@ -191,6 +191,9 @@
 			// ListaAlumnosDataGridView
 			// 
 			this.ListaAlumnosDataGridView.AutoGenerateColumns = false;
+			this.ListaAlumnosDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+			this.ListaAlumnosDataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+			this.ListaAlumnosDataGridView.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
 			this.ListaAlumnosDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.ListaAlumnosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -202,9 +205,9 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewCheckBoxColumn1});
 			this.ListaAlumnosDataGridView.DataSource = this.alumnosListaBindingSource;
-			this.ListaAlumnosDataGridView.Location = new System.Drawing.Point(32, 245);
+			this.ListaAlumnosDataGridView.Location = new System.Drawing.Point(14, 242);
 			this.ListaAlumnosDataGridView.Name = "ListaAlumnosDataGridView";
-			this.ListaAlumnosDataGridView.Size = new System.Drawing.Size(755, 220);
+			this.ListaAlumnosDataGridView.Size = new System.Drawing.Size(626, 220);
 			this.ListaAlumnosDataGridView.TabIndex = 0;
 			// 
 			// dataGridViewTextBoxColumn1
@@ -212,48 +215,56 @@
 			this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
 			this.dataGridViewTextBoxColumn1.HeaderText = "Id";
 			this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+			this.dataGridViewTextBoxColumn1.Width = 41;
 			// 
 			// dataGridViewTextBoxColumn2
 			// 
 			this.dataGridViewTextBoxColumn2.DataPropertyName = "Nombres";
 			this.dataGridViewTextBoxColumn2.HeaderText = "Nombres";
 			this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+			this.dataGridViewTextBoxColumn2.Width = 74;
 			// 
 			// dataGridViewTextBoxColumn3
 			// 
 			this.dataGridViewTextBoxColumn3.DataPropertyName = "Apellidos";
 			this.dataGridViewTextBoxColumn3.HeaderText = "Apellidos";
 			this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+			this.dataGridViewTextBoxColumn3.Width = 74;
 			// 
 			// dataGridViewTextBoxColumn4
 			// 
 			this.dataGridViewTextBoxColumn4.DataPropertyName = "Sexo";
 			this.dataGridViewTextBoxColumn4.HeaderText = "Sexo";
 			this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+			this.dataGridViewTextBoxColumn4.Width = 56;
 			// 
 			// dataGridViewTextBoxColumn5
 			// 
 			this.dataGridViewTextBoxColumn5.DataPropertyName = "EstadoCivil";
 			this.dataGridViewTextBoxColumn5.HeaderText = "EstadoCivil";
 			this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+			this.dataGridViewTextBoxColumn5.Width = 84;
 			// 
 			// dataGridViewTextBoxColumn6
 			// 
 			this.dataGridViewTextBoxColumn6.DataPropertyName = "Telefono";
 			this.dataGridViewTextBoxColumn6.HeaderText = "Telefono";
 			this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+			this.dataGridViewTextBoxColumn6.Width = 74;
 			// 
 			// dataGridViewTextBoxColumn7
 			// 
 			this.dataGridViewTextBoxColumn7.DataPropertyName = "Direccion";
 			this.dataGridViewTextBoxColumn7.HeaderText = "Direccion";
 			this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+			this.dataGridViewTextBoxColumn7.Width = 77;
 			// 
 			// dataGridViewCheckBoxColumn1
 			// 
 			this.dataGridViewCheckBoxColumn1.DataPropertyName = "Activo";
 			this.dataGridViewCheckBoxColumn1.HeaderText = "Activo";
 			this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+			this.dataGridViewCheckBoxColumn1.Width = 43;
 			// 
 			// alumnosListaBindingSource
 			// 
@@ -281,7 +292,7 @@
 			this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.alumnosListaBindingSource, "Direccion", true));
 			this.direccionTextBox.Location = new System.Drawing.Point(120, 192);
 			this.direccionTextBox.Name = "direccionTextBox";
-			this.direccionTextBox.Size = new System.Drawing.Size(104, 20);
+			this.direccionTextBox.Size = new System.Drawing.Size(149, 20);
 			this.direccionTextBox.TabIndex = 6;
 			// 
 			// estadoCivilTextBox
@@ -479,6 +490,7 @@
 			this.Controls.Add(telefonoLabel);
 			this.Controls.Add(this.telefonoTextBox);
 			this.Controls.Add(this.ListaAlumnosDataGridView);
+			this.Cursor = System.Windows.Forms.Cursors.Default;
 			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
 			this.Name = "frmAlumnos";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
