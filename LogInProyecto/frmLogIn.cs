@@ -22,6 +22,7 @@ namespace LogInProyecto
 
 		private void button1_Click(object sender, EventArgs e)
 		{
+			
 			var UniversidadBL = new UserValidation();
 			var User = textBox1.Text;
 			var pass = textBox2.Text;
