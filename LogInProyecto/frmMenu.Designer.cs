@@ -56,10 +56,12 @@
 			this.PanelContenedor = new System.Windows.Forms.Panel();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.panel1 = new System.Windows.Forms.Panel();
+			this.label2 = new System.Windows.Forms.Label();
 			this.BarraTitulo.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.btnMin)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
+			this.Logo.SuspendLayout();
 			this.panelMantenimiento.SuspendLayout();
 			this.MenuVertical.SuspendLayout();
 			this.panelReportes.SuspendLayout();
@@ -134,6 +136,7 @@
 			// 
 			// Logo
 			// 
+			this.Logo.Controls.Add(this.label2);
 			this.Logo.Dock = System.Windows.Forms.DockStyle.Top;
 			this.Logo.Location = new System.Drawing.Point(0, 0);
 			this.Logo.Name = "Logo";
@@ -183,10 +186,10 @@
 			this.btnCarreras.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnCarreras.ForeColor = System.Drawing.Color.Transparent;
 			this.btnCarreras.Image = ((System.Drawing.Image)(resources.GetObject("btnCarreras.Image")));
-			this.btnCarreras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnCarreras.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
 			this.btnCarreras.Location = new System.Drawing.Point(0, 101);
 			this.btnCarreras.Name = "btnCarreras";
-			this.btnCarreras.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+			this.btnCarreras.Padding = new System.Windows.Forms.Padding(20, 0, 0, 0);
 			this.btnCarreras.Size = new System.Drawing.Size(180, 36);
 			this.btnCarreras.TabIndex = 3;
 			this.btnCarreras.Text = "Carreras";
@@ -230,6 +233,7 @@
 			this.btnDocentes.TabIndex = 1;
 			this.btnDocentes.Text = "Docentes";
 			this.btnDocentes.UseVisualStyleBackColor = false;
+			this.btnDocentes.Click += new System.EventHandler(this.btnDocentes_Click);
 			// 
 			// btnAsignaturas
 			// 
@@ -345,14 +349,14 @@
 			this.btnReportes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnReportes.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnReportes.ForeColor = System.Drawing.Color.Transparent;
+			this.btnReportes.Image = ((System.Drawing.Image)(resources.GetObject("btnReportes.Image")));
 			this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.btnReportes.Location = new System.Drawing.Point(0, 378);
 			this.btnReportes.Name = "btnReportes";
-			this.btnReportes.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+			this.btnReportes.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
 			this.btnReportes.Size = new System.Drawing.Size(180, 39);
 			this.btnReportes.TabIndex = 19;
-			this.btnReportes.Text = "Reportes";
-			this.btnReportes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.btnReportes.Text = "---- Reportes ----";
 			this.btnReportes.UseVisualStyleBackColor = true;
 			this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
 			// 
@@ -480,6 +484,17 @@
 			this.panel1.Size = new System.Drawing.Size(5, 530);
 			this.panel1.TabIndex = 3;
 			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label2.ForeColor = System.Drawing.Color.Transparent;
+			this.label2.Location = new System.Drawing.Point(12, 14);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(53, 20);
+			this.label2.TabIndex = 0;
+			this.label2.Text = "label2";
+			// 
 			// frmMenu
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -497,6 +512,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.btnMin)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
+			this.Logo.ResumeLayout(false);
+			this.Logo.PerformLayout();
 			this.panelMantenimiento.ResumeLayout(false);
 			this.MenuVertical.ResumeLayout(false);
 			this.MenuVertical.PerformLayout();
@@ -538,6 +555,7 @@
 		private System.Windows.Forms.Panel PanelContenedor;
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.Windows.Forms.Label label2;
 	}
 }
 

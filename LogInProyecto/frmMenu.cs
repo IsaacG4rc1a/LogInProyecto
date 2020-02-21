@@ -139,6 +139,11 @@ namespace LogInProyecto
 			frmHijo.BringToFront();
 			frmHijo.Show();
 		}
+
+		private void btnDocentes_Click(object sender, EventArgs e)
+		{
+
+		}
 		// Final #2
 
 
