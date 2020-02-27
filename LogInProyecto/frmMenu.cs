@@ -37,7 +37,8 @@ namespace LogInProyecto
 
 		private void btnAsignaturas_Click(object sender, EventArgs e)
 		{
-			
+			frmAsignaturas frmAsig = new frmAsignaturas();
+			frmAsig.ShowDialog();
 		}
 
 		[DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]

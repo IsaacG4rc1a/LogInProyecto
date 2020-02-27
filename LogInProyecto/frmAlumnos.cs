@@ -14,13 +14,14 @@ namespace LogInProyecto
 {
 	public partial class frmAlumnos : Form
 	{
+
+		AlumnosBL _Alumnos = new AlumnosBL();
 		public frmAlumnos()
 		{
 			InitializeComponent();
 
-			var AluBL = new AlumnosBL();
-			alumnosListaBindingSource.DataSource = AluBL.ListaAlumno;
-			idTextBox.Enabled = false;
+			_Alumnos = new AlumnosBL();
+			alumnosListaBindingSource.DataSource = _Alumnos.ObtenerAlumnos();
 		}
 
 		[DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -35,10 +36,89 @@ namespace LogInProyecto
 			ReleaseCapture();
 			SendMessage(this.Handle, 0x112, 0xf012, 0);
 		}
-
+		//Cerrar formulario Menu
 		private void label1_Click_1(object sender, EventArgs e)
 		{
 			this.Close();
+		}
+
+		//Añadir campo nuevo a la lista
+		private void bindingNavigatorAddNewItem_Click_1(object sender, EventArgs e)
+		{
+			_Alumnos.AgregarAlumnos();
+			alumnosListaBindingSource.MoveLast();
+
+			ActivarDesactivarBotones(false);
+		}
+
+		//Habilitar y deshabilitar botones 
+		private void ActivarDesactivarBotones(bool v)
+		{
+			bindingNavigatorMoveFirstItem.Enabled = v;
+			bindingNavigatorCountItem.Enabled = v;
+			bindingNavigatorMoveLastItem.Enabled = v;
+			bindingNavigatorMoveNextItem.Enabled = v;
+			bindingNavigatorMovePreviousItem.Enabled = v;
+			bindingNavigatorPositionItem.Enabled = v;
+			bindingNavigatorDeleteItem.Enabled = v;
+			bindingNavigatorAddNewItem.Enabled = v;
+
+			toolStripButtonCancelar.Visible = !v;
+			toolStripButton1.Enabled = !v;
+
+		}
+
+		//Guardar cambios
+		private void toolStripButton1_Click_1(object sender, EventArgs e)
+		{
+			alumnosListaBindingSource.EndEdit();
+			var Alumnos = (AlumnosLista)alumnosListaBindingSource.Current;
+			var Resultado = _Alumnos.Guardar(Alumnos);
+
+			if (Resultado.Exitoso == true)
+			{
+				alumnosListaBindingSource.ResetBindings(false);
+				ActivarDesactivarBotones(true);
+				MessageBox.Show("El registro se agregó correctamente.");
+			}
+			else
+			{
+				MessageBox.Show(Resultado.Mensaje);
+			}
+		}
+
+		//Llamada al metodo eliminar
+		private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+		{
+			if (idTextBox.Text != "")
+			{
+				var resultado = MessageBox.Show("¿Desea eliminar el registro '" + nombresTextBox.Text + " " + apellidosTextBox.Text + "'?", "Eliminar", MessageBoxButtons.YesNo);
+				if (resultado == DialogResult.Yes)
+				{
+					var Id = int.Parse(idTextBox.Text);
+					EliminarLinea(Id);
+				}
+			}
+			else
+			{
+				MessageBox.Show("No existen registros.");
+			}
+		}
+		//Metodo para eliminar registro
+		private void EliminarLinea(int id)
+		{
+			var Resultado = _Alumnos.Eliminar(id);
+			if (Resultado == true)
+			{
+				alumnosListaBindingSource.ResetBindings(false);
+			}
+		}
+
+		//Cancelar registro nuevo 
+		private void toolStripButtonCancelar_Click(object sender, EventArgs e)
+		{
+			ActivarDesactivarBotones(true);
+			EliminarLinea(0);
 		}
 	}
 }

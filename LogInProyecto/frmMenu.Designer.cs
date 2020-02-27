@@ -35,6 +35,7 @@
 			this.btnSalir = new System.Windows.Forms.PictureBox();
 			this.lblSalir = new System.Windows.Forms.Label();
 			this.Logo = new System.Windows.Forms.Panel();
+			this.label2 = new System.Windows.Forms.Label();
 			this.panelMantenimiento = new System.Windows.Forms.Panel();
 			this.btnMatricula = new System.Windows.Forms.Button();
 			this.btnCarreras = new System.Windows.Forms.Button();
@@ -56,7 +57,6 @@
 			this.PanelContenedor = new System.Windows.Forms.Panel();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.panel1 = new System.Windows.Forms.Panel();
-			this.label2 = new System.Windows.Forms.Label();
 			this.BarraTitulo.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.btnMin)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
@@ -142,6 +142,17 @@
 			this.Logo.Name = "Logo";
 			this.Logo.Size = new System.Drawing.Size(180, 96);
 			this.Logo.TabIndex = 4;
+			// 
+			// label2
+			// 
+			this.label2.AutoSize = true;
+			this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label2.ForeColor = System.Drawing.Color.Transparent;
+			this.label2.Location = new System.Drawing.Point(12, 14);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(53, 20);
+			this.label2.TabIndex = 0;
+			this.label2.Text = "label2";
 			// 
 			// panelMantenimiento
 			// 
@@ -483,17 +494,6 @@
 			this.panel1.Name = "panel1";
 			this.panel1.Size = new System.Drawing.Size(5, 530);
 			this.panel1.TabIndex = 3;
-			// 
-			// label2
-			// 
-			this.label2.AutoSize = true;
-			this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.ForeColor = System.Drawing.Color.Transparent;
-			this.label2.Location = new System.Drawing.Point(12, 14);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(53, 20);
-			this.label2.TabIndex = 0;
-			this.label2.Text = "label2";
 			// 
 			// frmMenu
 			// 
