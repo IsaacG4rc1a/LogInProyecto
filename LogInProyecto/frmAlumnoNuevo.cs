@@ -7,19 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Universidad.BL;
 
 namespace LogInProyecto
 {
-	public partial class frmRegistroDocentes : Form
+	public partial class frmAlumnoNuevo : Form
 	{
-		public frmRegistroDocentes()
+		public frmAlumnoNuevo()
 		{
 			InitializeComponent();
-
-			
 		}
-
-		
 	}
 }

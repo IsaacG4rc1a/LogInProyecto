@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Universidad.BL;
 
 namespace LogInProyecto
 {
@@ -15,6 +16,14 @@ namespace LogInProyecto
 		public frmAsignaturas()
 		{
 			InitializeComponent();
+			ListaAsignaturas();
+		}
+
+		public void ListaAsignaturas()
+		{
+			clsAsignaturas asig = new clsAsignaturas();
+
+			dgvAsignaturas.DataSource = asig.ListarAsignaturas();
 		}
 	}
 }
