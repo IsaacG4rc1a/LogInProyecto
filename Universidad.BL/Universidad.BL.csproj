@@ -64,6 +64,7 @@
     <Compile Include="AlumnosLista.cs" />
     <Compile Include="clsAsignaturas.cs" />
     <Compile Include="Conexion.cs" />
+    <Compile Include="Contexto.cs" />
     <Compile Include="UserValidation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usuarios.cs" />

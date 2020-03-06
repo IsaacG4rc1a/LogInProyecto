@@ -120,5 +120,10 @@ namespace LogInProyecto
 			ActivarDesactivarBotones(true);
 			EliminarLinea(0);
 		}
-	}
+
+        private void frmAlumnos_Load(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
