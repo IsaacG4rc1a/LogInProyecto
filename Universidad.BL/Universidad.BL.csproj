@@ -62,8 +62,7 @@
   <ItemGroup>
     <Compile Include="AlumnosBL.cs" />
     <Compile Include="AlumnosLista.cs" />
-    <Compile Include="clsAsignaturas.cs" />
-    <Compile Include="Conexion.cs" />
+    <Compile Include="ContextoBD.cs" />
     <Compile Include="UserValidation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usuarios.cs" />

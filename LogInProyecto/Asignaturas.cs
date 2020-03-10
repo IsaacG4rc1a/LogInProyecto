@@ -16,14 +16,6 @@ namespace LogInProyecto
 		public frmAsignaturas()
 		{
 			InitializeComponent();
-			ListaAsignaturas();
-		}
-
-		public void ListaAsignaturas()
-		{
-			clsAsignaturas asig = new clsAsignaturas();
-
-			dgvAsignaturas.DataSource = asig.ListarAsignaturas();
 		}
 	}
 }
