@@ -145,6 +145,12 @@ namespace LogInProyecto
 		{
 
 		}
+
+		private void btnMatricula_Click(object sender, EventArgs e)
+		{
+			OcultarMenus();
+			AbrirfrmHijo(new frmMatricula());
+		}
 		// Final #2
 
 

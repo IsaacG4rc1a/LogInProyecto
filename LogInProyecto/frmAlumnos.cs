@@ -9,19 +9,25 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Universidad.BL;
 using System.Runtime.InteropServices;
+using System.IO;
 
 namespace LogInProyecto
 {
 	public partial class frmAlumnos : Form
 	{
 
-		AlumnosBL _Alumnos = new AlumnosBL();
+		AlumnosBL _Alumnos;
+		EstadoCivilBL _EstadoCivil;
+
 		public frmAlumnos()
 		{
 			InitializeComponent();
-
 			_Alumnos = new AlumnosBL();
 			alumnosListaBindingSource.DataSource = _Alumnos.ObtenerAlumnos();
+
+			_EstadoCivil = new EstadoCivilBL();
+			estadoCivilBindingSource.DataSource = _EstadoCivil.ObtenerEC();
+
 		}
 
 		[DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -73,6 +79,16 @@ namespace LogInProyecto
 		{
 			alumnosListaBindingSource.EndEdit();
 			var Alumnos = (AlumnosLista)alumnosListaBindingSource.Current;
+
+			if (fotoPictureBox.Image != null)
+			{
+				Alumnos.Foto = Program.imageToArray(fotoPictureBox.Image); 
+			}
+			else
+			{
+				fotoPictureBox.Image = null;
+			}
+
 			var Resultado = _Alumnos.Guardar(Alumnos);
 
 			if (Resultado.Exitoso == true)
@@ -125,5 +141,35 @@ namespace LogInProyecto
         {
 
         }
-    }
+
+		private void btnAgregarFoto_Click(object sender, EventArgs e) /////// FALTAN CORRECCIONES
+		{
+			var Alumno = (AlumnosLista)alumnosListaBindingSource.Current;
+
+			if (Alumno != null)
+			{
+				ofpElegirFoto.ShowDialog();
+				var Archivo = ofpElegirFoto.FileName;
+
+				if (Archivo != "")
+				{
+					var fileInfo = new FileInfo(Archivo);
+					var fileStream = fileInfo.OpenRead();
+
+					fotoPictureBox.Image = Image.FromStream(fileStream);
+				}
+			}
+			else
+			{
+				MessageBox.Show("Cree un registro antes de asignar la imagen.", "Advertencia");
+			}
+		}
+
+		///FIN CORRECCIONES 
+
+		private void btnQuitarFoto_Click(object sender, EventArgs e) ////FALTAN CORRECIONES GUARDAR FOTO NULA
+		{
+			fotoPictureBox.Image = null;
+		}
+	}
 }

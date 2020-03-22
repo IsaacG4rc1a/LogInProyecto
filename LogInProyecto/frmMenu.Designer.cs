@@ -186,6 +186,7 @@
 			this.btnMatricula.TabIndex = 4;
 			this.btnMatricula.Text = "Matrícula";
 			this.btnMatricula.UseVisualStyleBackColor = false;
+			this.btnMatricula.Click += new System.EventHandler(this.btnMatricula_Click);
 			// 
 			// btnCarreras
 			// 

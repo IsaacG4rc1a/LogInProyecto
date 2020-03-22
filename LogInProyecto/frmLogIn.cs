@@ -29,10 +29,9 @@ namespace LogInProyecto
 
 			if (UniversidadBL.Validar(User, pass) == true)
 			{
-				frmMenu menu = new frmMenu();
 				this.Hide();
-				menu.ShowDialog();
-				
+				Bienvenida b = new Bienvenida();
+				b.ShowDialog();
 			}
 			else
 			{

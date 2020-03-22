@@ -11,15 +11,20 @@ namespace Universidad.BL
 	public class ContextoBD : DbContext
 	{
 		public ContextoBD() : base(@"Data Source=(LocalDb)\MSSQLLocalDB;AttachDBFilename=" +
-			Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\Universidad.mdf")
+			Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\Universidad")
 		{
 
 		}
 		protected override void OnModelCreating(DbModelBuilder modelBuilder)
 		{
 			modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+			Database.SetInitializer(new DatosDeInicio());
 		}
 
 		public DbSet<AlumnosLista> tbAlumnos { get; set; }
+		public DbSet<EstadoCivil> tbEstadoCivil { get; set; }
+		public DbSet<AsignaturasLista> tbAsignaturas { get; set; }
+		public DbSet<DocentesLista> tbDocentes { get; set; }
+		public DbSet<MatriculaAsignaturas> tbMatricula { get; set; }
 	}
 }
