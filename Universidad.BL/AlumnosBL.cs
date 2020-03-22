@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,36 +10,20 @@ namespace Universidad.BL
 {
 	public class AlumnosBL
 	{
+        Contexto _contexto;//declarando la instancia de tipo global para poder usarla en todos los metodos
 		public BindingList<AlumnosLista> ListaAlumno { get; set; }
+
 		public AlumnosBL()
 		{
-			ListaAlumno = new BindingList<AlumnosLista>();
-			var Alumno = new AlumnosLista();
-
-			Alumno.Id = 1;
-			Alumno.Nombres = "Juan Ariel";
-			Alumno.Apellidos = "Morales Cruz";
-			Alumno.Direccion = "San Pedro Sula, Cortés";
-			Alumno.Sexo = "M";
-			Alumno.EstadoCivil = "S";
-			Alumno.Telefono = "+504-9832-4543";
-
-			var Alumno2 = new AlumnosLista();
-
-			Alumno2.Id = 2;
-			Alumno2.Nombres = "Maria Carolina";
-			Alumno2.Apellidos = "Sanchez Cruz";
-			Alumno2.Direccion = "San Pedro Sula, Cortés";
-			Alumno2.Sexo = "F";
-			Alumno2.EstadoCivil = "C";
-			Alumno2.Telefono = "+504-9322-4543";
-
-			ListaAlumno.Add(Alumno);
-			ListaAlumno.Add(Alumno2);
+            _contexto = new Contexto();//Const.
+			ListaAlumno = new BindingList<AlumnosLista>();//Instancia de lista alumnos
+			
 		}
 
 		public BindingList<AlumnosLista> ObtenerAlumnos()
 		{
+            _contexto.tbAlumnos.Load();
+            ListaAlumno = _contexto.tbAlumnos.Local.ToBindingList();
 			return ListaAlumno;
 		}
 
@@ -51,10 +36,7 @@ namespace Universidad.BL
 			{
 				return resultado;
 			}
-			if (Alumno.Id == 0)
-			{
-				Alumno.Id = ListaAlumno.Max(item => item.Id) + 1;
-			}
+            _contexto.SaveChanges();
 			resultado.Exitoso = true;
 			return resultado;
 		}
@@ -73,6 +55,7 @@ namespace Universidad.BL
 				if (item.Id == id)
 				{
 					ListaAlumno.Remove(item);
+                    _contexto.SaveChanges();
 					return true;
 				}
 			}
