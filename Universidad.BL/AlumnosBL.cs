@@ -23,6 +23,8 @@ namespace Universidad.BL
 		public BindingList<AlumnosLista> ObtenerAlumnos()
 		{
             _contexto.tbAlumnos.Load();
+
+
             ListaAlumno = _contexto.tbAlumnos.Local.ToBindingList();
 			return ListaAlumno;
 		}
