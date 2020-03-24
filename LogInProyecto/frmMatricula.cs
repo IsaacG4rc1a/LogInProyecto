@@ -33,6 +33,9 @@ namespace LogInProyecto
 
 			_asignaturasBL = new AsignaturasBL();
 			asignaturasListaBindingSource.DataSource = _asignaturasBL.ObtenerAsignaturas();
+
+			var Matricula = (MatriculaAsignaturas)matriculaAsignaturasBindingSource.Current;
+			AnularFacura(Matricula);
 		}
 
 		private void label1_Click(object sender, EventArgs e)
@@ -177,7 +180,7 @@ namespace LogInProyecto
 				lblVacio.Visible = false;
 			}
 
-			if (Matricula != null && Matricula.Id == 0 || Matricula.Id != 0 && Matricula.Activo == true)
+			if (Matricula != null &&  Matricula.Activo == true)
 			{
 				lblCANCELADA.Visible = false;
 				lblActiva.Visible = true;
