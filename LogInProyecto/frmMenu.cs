@@ -151,6 +151,20 @@ namespace LogInProyecto
 			OcultarMenus();
 			AbrirfrmHijo(new frmMatricula());
 		}
+
+		private void btnReportAlumnos_Click(object sender, EventArgs e)
+		{
+			OcultarMenus();
+			frmReporteAlumnos reportA = new frmReporteAlumnos();
+			reportA.ShowDialog();
+		}
+
+		private void btnReportMatricula_Click(object sender, EventArgs e)
+		{
+			OcultarMenus();
+			frmReporteMatricula reportM = new frmReporteMatricula();
+			reportM.ShowDialog();
+		}
 		// Final #2
 
 

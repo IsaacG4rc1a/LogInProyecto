@@ -333,6 +333,7 @@
 			this.btnReportAlumnos.TabIndex = 3;
 			this.btnReportAlumnos.Text = "Reporte alumnos";
 			this.btnReportAlumnos.UseVisualStyleBackColor = false;
+			this.btnReportAlumnos.Click += new System.EventHandler(this.btnReportAlumnos_Click);
 			// 
 			// btnReportMatricula
 			// 
@@ -351,6 +352,7 @@
 			this.btnReportMatricula.TabIndex = 2;
 			this.btnReportMatricula.Text = "Reporte matrícula";
 			this.btnReportMatricula.UseVisualStyleBackColor = false;
+			this.btnReportMatricula.Click += new System.EventHandler(this.btnReportMatricula_Click);
 			// 
 			// btnReportes
 			// 
