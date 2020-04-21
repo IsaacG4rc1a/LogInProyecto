@@ -51,16 +51,6 @@ namespace LogInProyecto
 			textBox2.Size = new Size(326, 35);
 		}
 
-		private void label3_Click(object sender, EventArgs e)
-		{
-
-		}
-
-		private void textBox1_TextChanged(object sender, EventArgs e)
-		{
-
-		}
-
 		private void textBox2_TextChanged(object sender, EventArgs e)
 		{
 			textBox2.UseSystemPasswordChar = true;
@@ -93,6 +83,16 @@ namespace LogInProyecto
 		{
 			WindowState = FormWindowState.Minimized;
 		}
-		
+
+
+		private void label3_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void textBox1_TextChanged(object sender, EventArgs e)
+		{
+
+		}
 	}
 }
