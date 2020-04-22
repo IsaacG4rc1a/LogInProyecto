@@ -21,8 +21,9 @@ namespace LogInProyecto
 
 		private void frmMenu_Load(object sender, EventArgs e)
 		{
-			
+			Login();
 		}
+
 
 		private void btnCerrar_Click(object sender, EventArgs e)
 		{
@@ -164,6 +165,26 @@ namespace LogInProyecto
 			OcultarMenus();
 			frmReporteMatricula reportM = new frmReporteMatricula();
 			reportM.ShowDialog();
+		}
+
+		private void btnUsuarios_Click(object sender, EventArgs e)
+		{
+			OcultarMenus();
+			AbrirfrmHijo(new frmUsuarios());
+		}
+
+		private void toolStripStatusLabel1_Click(object sender, EventArgs e)
+		{
+			
+		}
+
+		private void Login()
+		{
+			if (Program.UsuarioLogueado != null)
+			{
+				var Nombre = Program.UsuarioLogueado.Usuario.ToUpper();
+				toolStripStatusLabel1.Text = "Usuario: " + Nombre;
+			}
 		}
 		// Final #2
 

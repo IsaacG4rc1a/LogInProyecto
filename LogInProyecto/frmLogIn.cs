@@ -10,11 +10,14 @@ using System.Windows.Forms;
 using LogInProyecto.Properties;
 using System.Runtime.InteropServices;
 using Universidad.BL;
+using System.Data.Entity;
 
 namespace LogInProyecto
 {
 	public partial class frmLogIn : Form
 	{
+
+		UserValidation _seguridad;
 		public frmLogIn()
 		{
 			InitializeComponent();
@@ -22,16 +25,21 @@ namespace LogInProyecto
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			
-			var UniversidadBL = new UserValidation();
-			var User = textBox1.Text;
-			var pass = textBox2.Text;
+			_seguridad = new UserValidation();
 
-			if (UniversidadBL.Validar(User, pass) == true)
+			string User = textBox1.Text;
+			string pass = textBox2.Text;
+			var usuarioDB = _seguridad.Validar(User, pass);
+			
+
+			if (usuarioDB != null)
 			{
+
+				Program.UsuarioLogueado = usuarioDB;
 				this.Hide();
 				Bienvenida b = new Bienvenida();
 				b.ShowDialog();
+
 			}
 			else
 			{
@@ -102,6 +110,22 @@ namespace LogInProyecto
 		{
 			ReleaseCapture();
 			SendMessage(this.Handle, 0x112, 0xf012, 0);
+		}
+
+		private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			if (e.KeyChar == Convert.ToChar(Keys.Enter) && !string.IsNullOrEmpty(textBox1.Text))
+			{
+				textBox2.Focus();
+			}
+		}
+
+		private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+		{
+			if (e.KeyChar == Convert.ToChar(Keys.Enter) && !string.IsNullOrEmpty(textBox2.Text))
+			{
+				button1.PerformClick();
+			}
 		}
 	}
 }

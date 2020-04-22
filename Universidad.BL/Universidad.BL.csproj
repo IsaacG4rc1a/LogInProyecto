@@ -78,6 +78,7 @@
     <Compile Include="UserValidation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usuarios.cs" />
+    <Compile Include="UsuariosBL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

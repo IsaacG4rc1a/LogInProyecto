@@ -11,5 +11,6 @@ namespace Universidad.BL
 		public int Id { get; set; }
 		public string Usuario { get; set; }
 		public string Contrasenia { get; set; }
+		public string TipoUsuario { get; set; }
 	}
 }

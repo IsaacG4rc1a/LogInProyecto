@@ -22,6 +22,7 @@ namespace LogInProyecto
 		public frmAlumnos()
 		{
 			InitializeComponent();
+
 			_Alumnos = new AlumnosBL();
 			alumnosListaBindingSource.DataSource = _Alumnos.ObtenerAlumnos();
 

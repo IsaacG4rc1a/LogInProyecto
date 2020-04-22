@@ -11,6 +11,18 @@ namespace Universidad.BL
 	{
 		protected override void Seed(ContextoBD context)
 		{
+			//////////////////////////// Datos de inicio Usuarios/////////////////////
+
+			var Usuario = new Usuarios();
+
+			Usuario.Id = 1;
+			Usuario.Usuario = "admin";
+			Usuario.Contrasenia = "123";
+			Usuario.TipoUsuario = "Administrador";
+
+			context.tbUsuarios.Add(Usuario);
+
+			//////////////////////////// Datos de inicio Estado civil/////////////////////
 			var Ec = new EstadoCivil();
 			Ec.Descripcion = "Solter@";
 			context.tbEstadoCivil.Add(Ec);

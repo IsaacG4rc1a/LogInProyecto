@@ -26,5 +26,6 @@ namespace Universidad.BL
 		public DbSet<AsignaturasLista> tbAsignaturas { get; set; }
 		public DbSet<DocentesLista> tbDocentes { get; set; }
 		public DbSet<MatriculaAsignaturas> tbMatricula { get; set; }
+		public DbSet<Usuarios> tbUsuarios { get; set; }
 	}
 }

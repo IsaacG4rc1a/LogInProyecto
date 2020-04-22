@@ -35,7 +35,8 @@
 			this.btnSalir = new System.Windows.Forms.PictureBox();
 			this.lblSalir = new System.Windows.Forms.Label();
 			this.Logo = new System.Windows.Forms.Panel();
-			this.label2 = new System.Windows.Forms.Label();
+			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+			this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
 			this.panelMantenimiento = new System.Windows.Forms.Panel();
 			this.btnMatricula = new System.Windows.Forms.Button();
 			this.btnCarreras = new System.Windows.Forms.Button();
@@ -62,6 +63,7 @@
 			((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.btnSalir)).BeginInit();
 			this.Logo.SuspendLayout();
+			this.statusStrip1.SuspendLayout();
 			this.panelMantenimiento.SuspendLayout();
 			this.MenuVertical.SuspendLayout();
 			this.panelReportes.SuspendLayout();
@@ -112,7 +114,7 @@
 			// 
 			this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
-			this.btnSalir.Location = new System.Drawing.Point(3, 492);
+			this.btnSalir.Location = new System.Drawing.Point(12, 489);
 			this.btnSalir.Name = "btnSalir";
 			this.btnSalir.Size = new System.Drawing.Size(35, 35);
 			this.btnSalir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -127,7 +129,7 @@
 			this.lblSalir.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.lblSalir.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblSalir.ForeColor = System.Drawing.Color.Transparent;
-			this.lblSalir.Location = new System.Drawing.Point(29, 504);
+			this.lblSalir.Location = new System.Drawing.Point(49, 498);
 			this.lblSalir.Name = "lblSalir";
 			this.lblSalir.Size = new System.Drawing.Size(90, 17);
 			this.lblSalir.TabIndex = 3;
@@ -136,23 +138,32 @@
 			// 
 			// Logo
 			// 
-			this.Logo.Controls.Add(this.label2);
+			this.Logo.Controls.Add(this.statusStrip1);
 			this.Logo.Dock = System.Windows.Forms.DockStyle.Top;
 			this.Logo.Location = new System.Drawing.Point(0, 0);
 			this.Logo.Name = "Logo";
-			this.Logo.Size = new System.Drawing.Size(180, 96);
+			this.Logo.Size = new System.Drawing.Size(180, 47);
 			this.Logo.TabIndex = 4;
 			// 
-			// label2
+			// statusStrip1
 			// 
-			this.label2.AutoSize = true;
-			this.label2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.ForeColor = System.Drawing.Color.Transparent;
-			this.label2.Location = new System.Drawing.Point(12, 14);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(53, 20);
-			this.label2.TabIndex = 0;
-			this.label2.Text = "label2";
+			this.statusStrip1.Dock = System.Windows.Forms.DockStyle.None;
+			this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+			this.statusStrip1.Location = new System.Drawing.Point(12, 14);
+			this.statusStrip1.Name = "statusStrip1";
+			this.statusStrip1.Size = new System.Drawing.Size(86, 25);
+			this.statusStrip1.TabIndex = 21;
+			this.statusStrip1.Text = "Usuarios en RED";
+			// 
+			// toolStripStatusLabel1
+			// 
+			this.toolStripStatusLabel1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.toolStripStatusLabel1.ForeColor = System.Drawing.Color.White;
+			this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+			this.toolStripStatusLabel1.Size = new System.Drawing.Size(69, 20);
+			this.toolStripStatusLabel1.Text = "En linea:";
+			this.toolStripStatusLabel1.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
 			// 
 			// panelMantenimiento
 			// 
@@ -163,7 +174,7 @@
 			this.panelMantenimiento.Controls.Add(this.btnDocentes);
 			this.panelMantenimiento.Controls.Add(this.btnAsignaturas);
 			this.panelMantenimiento.Dock = System.Windows.Forms.DockStyle.Top;
-			this.panelMantenimiento.Location = new System.Drawing.Point(0, 135);
+			this.panelMantenimiento.Location = new System.Drawing.Point(0, 86);
 			this.panelMantenimiento.Name = "panelMantenimiento";
 			this.panelMantenimiento.Size = new System.Drawing.Size(180, 170);
 			this.panelMantenimiento.TabIndex = 16;
@@ -274,11 +285,11 @@
 			this.MenuVertical.Controls.Add(this.btnReportes);
 			this.MenuVertical.Controls.Add(this.panelSeguridad);
 			this.MenuVertical.Controls.Add(this.btnSeguridad);
+			this.MenuVertical.Controls.Add(this.lblSalir);
 			this.MenuVertical.Controls.Add(this.panelMantenimiento);
+			this.MenuVertical.Controls.Add(this.btnSalir);
 			this.MenuVertical.Controls.Add(this.btnMantenimiento);
 			this.MenuVertical.Controls.Add(this.Logo);
-			this.MenuVertical.Controls.Add(this.lblSalir);
-			this.MenuVertical.Controls.Add(this.btnSalir);
 			this.MenuVertical.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.MenuVertical.Dock = System.Windows.Forms.DockStyle.Left;
 			this.MenuVertical.Location = new System.Drawing.Point(0, 35);
@@ -293,7 +304,7 @@
 			this.panelReportes.Controls.Add(this.btnReportAlumnos);
 			this.panelReportes.Controls.Add(this.btnReportMatricula);
 			this.panelReportes.Dock = System.Windows.Forms.DockStyle.Top;
-			this.panelReportes.Location = new System.Drawing.Point(0, 417);
+			this.panelReportes.Location = new System.Drawing.Point(0, 368);
 			this.panelReportes.Name = "panelReportes";
 			this.panelReportes.Size = new System.Drawing.Size(180, 108);
 			this.panelReportes.TabIndex = 20;
@@ -365,7 +376,7 @@
 			this.btnReportes.ForeColor = System.Drawing.Color.Transparent;
 			this.btnReportes.Image = ((System.Drawing.Image)(resources.GetObject("btnReportes.Image")));
 			this.btnReportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnReportes.Location = new System.Drawing.Point(0, 378);
+			this.btnReportes.Location = new System.Drawing.Point(0, 329);
 			this.btnReportes.Name = "btnReportes";
 			this.btnReportes.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
 			this.btnReportes.Size = new System.Drawing.Size(180, 39);
@@ -379,7 +390,7 @@
 			this.panelSeguridad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.panelSeguridad.Controls.Add(this.btnUsuarios);
 			this.panelSeguridad.Dock = System.Windows.Forms.DockStyle.Top;
-			this.panelSeguridad.Location = new System.Drawing.Point(0, 344);
+			this.panelSeguridad.Location = new System.Drawing.Point(0, 295);
 			this.panelSeguridad.Name = "panelSeguridad";
 			this.panelSeguridad.Size = new System.Drawing.Size(180, 34);
 			this.panelSeguridad.TabIndex = 18;
@@ -402,6 +413,7 @@
 			this.btnUsuarios.TabIndex = 1;
 			this.btnUsuarios.Text = "Usuarios";
 			this.btnUsuarios.UseVisualStyleBackColor = false;
+			this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
 			// 
 			// btnSeguridad
 			// 
@@ -414,7 +426,7 @@
 			this.btnSeguridad.ForeColor = System.Drawing.Color.Transparent;
 			this.btnSeguridad.Image = ((System.Drawing.Image)(resources.GetObject("btnSeguridad.Image")));
 			this.btnSeguridad.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnSeguridad.Location = new System.Drawing.Point(0, 305);
+			this.btnSeguridad.Location = new System.Drawing.Point(0, 256);
 			this.btnSeguridad.Name = "btnSeguridad";
 			this.btnSeguridad.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
 			this.btnSeguridad.Size = new System.Drawing.Size(180, 39);
@@ -434,7 +446,7 @@
 			this.btnMantenimiento.ForeColor = System.Drawing.Color.Transparent;
 			this.btnMantenimiento.Image = ((System.Drawing.Image)(resources.GetObject("btnMantenimiento.Image")));
 			this.btnMantenimiento.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnMantenimiento.Location = new System.Drawing.Point(0, 96);
+			this.btnMantenimiento.Location = new System.Drawing.Point(0, 47);
 			this.btnMantenimiento.Name = "btnMantenimiento";
 			this.btnMantenimiento.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
 			this.btnMantenimiento.Size = new System.Drawing.Size(180, 39);
@@ -517,6 +529,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.btnSalir)).EndInit();
 			this.Logo.ResumeLayout(false);
 			this.Logo.PerformLayout();
+			this.statusStrip1.ResumeLayout(false);
+			this.statusStrip1.PerformLayout();
 			this.panelMantenimiento.ResumeLayout(false);
 			this.MenuVertical.ResumeLayout(false);
 			this.MenuVertical.PerformLayout();
@@ -558,7 +572,8 @@
 		private System.Windows.Forms.Panel PanelContenedor;
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.PictureBox pictureBox1;
-		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.StatusStrip statusStrip1;
+		private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
 	}
 }
 
