@@ -37,9 +37,7 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmUsuarios));
 			this.usuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.usuariosBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-			this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
 			this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-			this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
 			this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
 			this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
 			this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -48,17 +46,20 @@
 			this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
 			this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
 			this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+			this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+			this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
 			this.usuariosBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+			this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
 			this.contraseniaTextBox = new System.Windows.Forms.TextBox();
 			this.idTextBox = new System.Windows.Forms.TextBox();
 			this.usuarioTextBox = new System.Windows.Forms.TextBox();
 			this.usuariosDataGridView = new System.Windows.Forms.DataGridView();
-			this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-			this.label1 = new System.Windows.Forms.Label();
-			this.tipoUsuarioComboBox = new System.Windows.Forms.ComboBox();
 			this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Contrasenia = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.label1 = new System.Windows.Forms.Label();
+			this.tipoUsuarioComboBox = new System.Windows.Forms.ComboBox();
 			label2 = new System.Windows.Forms.Label();
 			contraseniaLabel = new System.Windows.Forms.Label();
 			idLabel = new System.Windows.Forms.Label();
@@ -163,32 +164,12 @@
 			this.usuariosBindingNavigator.TabIndex = 20;
 			this.usuariosBindingNavigator.Text = "bindingNavigator1";
 			// 
-			// bindingNavigatorAddNewItem
-			// 
-			this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-			this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-			this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-			this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-			this.bindingNavigatorAddNewItem.Text = "Nuevo";
-			this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
-			// 
 			// bindingNavigatorCountItem
 			// 
 			this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
 			this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 22);
 			this.bindingNavigatorCountItem.Text = "of {0}";
 			this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-			// 
-			// bindingNavigatorDeleteItem
-			// 
-			this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-			this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-			this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-			this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
-			this.bindingNavigatorDeleteItem.Text = "Eliminar";
-			this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
 			// 
 			// bindingNavigatorMoveFirstItem
 			// 
@@ -250,6 +231,26 @@
 			this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
 			this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 25);
 			// 
+			// bindingNavigatorAddNewItem
+			// 
+			this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+			this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+			this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+			this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
+			this.bindingNavigatorAddNewItem.Text = "Nuevo";
+			this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
+			// 
+			// bindingNavigatorDeleteItem
+			// 
+			this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+			this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+			this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+			this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
+			this.bindingNavigatorDeleteItem.Text = "Eliminar";
+			this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
+			// 
 			// usuariosBindingNavigatorSaveItem
 			// 
 			this.usuariosBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -259,6 +260,17 @@
 			this.usuariosBindingNavigatorSaveItem.Text = "Guardar";
 			this.usuariosBindingNavigatorSaveItem.Click += new System.EventHandler(this.usuariosBindingNavigatorSaveItem_Click);
 			// 
+			// toolStripButton1
+			// 
+			this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+			this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+			this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripButton1.Name = "toolStripButton1";
+			this.toolStripButton1.Size = new System.Drawing.Size(57, 22);
+			this.toolStripButton1.Text = "Cancelar";
+			this.toolStripButton1.Visible = false;
+			this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+			// 
 			// contraseniaTextBox
 			// 
 			this.contraseniaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "Contrasenia", true));
@@ -266,12 +278,14 @@
 			this.contraseniaTextBox.Name = "contraseniaTextBox";
 			this.contraseniaTextBox.Size = new System.Drawing.Size(100, 20);
 			this.contraseniaTextBox.TabIndex = 21;
+			this.contraseniaTextBox.TextChanged += new System.EventHandler(this.contraseniaTextBox_TextChanged);
 			// 
 			// idTextBox
 			// 
 			this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.usuariosBindingSource, "Id", true));
 			this.idTextBox.Location = new System.Drawing.Point(246, 95);
 			this.idTextBox.Name = "idTextBox";
+			this.idTextBox.ReadOnly = true;
 			this.idTextBox.Size = new System.Drawing.Size(100, 20);
 			this.idTextBox.TabIndex = 23;
 			// 
@@ -290,23 +304,37 @@
 			this.usuariosDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
+            this.Contrasenia,
             this.dataGridViewTextBoxColumn4});
 			this.usuariosDataGridView.DataSource = this.usuariosBindingSource;
 			this.usuariosDataGridView.Location = new System.Drawing.Point(186, 182);
 			this.usuariosDataGridView.Name = "usuariosDataGridView";
-			this.usuariosDataGridView.Size = new System.Drawing.Size(367, 195);
+			this.usuariosDataGridView.Size = new System.Drawing.Size(444, 195);
 			this.usuariosDataGridView.TabIndex = 27;
 			// 
-			// toolStripButton1
+			// dataGridViewTextBoxColumn1
 			// 
-			this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-			this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-			this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripButton1.Name = "toolStripButton1";
-			this.toolStripButton1.Size = new System.Drawing.Size(57, 22);
-			this.toolStripButton1.Text = "Cancelar";
-			this.toolStripButton1.Visible = false;
-			this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
+			this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+			this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+			this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+			// 
+			// dataGridViewTextBoxColumn2
+			// 
+			this.dataGridViewTextBoxColumn2.DataPropertyName = "Usuario";
+			this.dataGridViewTextBoxColumn2.HeaderText = "Usuario";
+			this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+			// 
+			// Contrasenia
+			// 
+			this.Contrasenia.DataPropertyName = "Contrasenia";
+			this.Contrasenia.HeaderText = "Contrasenia";
+			this.Contrasenia.Name = "Contrasenia";
+			// 
+			// dataGridViewTextBoxColumn4
+			// 
+			this.dataGridViewTextBoxColumn4.DataPropertyName = "TipoUsuario";
+			this.dataGridViewTextBoxColumn4.HeaderText = "TipoUsuario";
+			this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
 			// 
 			// label1
 			// 
@@ -327,30 +355,12 @@
 			this.tipoUsuarioComboBox.FormattingEnabled = true;
 			this.tipoUsuarioComboBox.Items.AddRange(new object[] {
             "Administrador",
-            "Supervisor",
-            "Digitador"});
+            "Gerencia",
+            "Secretaría"});
 			this.tipoUsuarioComboBox.Location = new System.Drawing.Point(482, 123);
 			this.tipoUsuarioComboBox.Name = "tipoUsuarioComboBox";
 			this.tipoUsuarioComboBox.Size = new System.Drawing.Size(121, 21);
 			this.tipoUsuarioComboBox.TabIndex = 29;
-			// 
-			// dataGridViewTextBoxColumn1
-			// 
-			this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-			this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-			this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-			// 
-			// dataGridViewTextBoxColumn2
-			// 
-			this.dataGridViewTextBoxColumn2.DataPropertyName = "Usuario";
-			this.dataGridViewTextBoxColumn2.HeaderText = "Usuario";
-			this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-			// 
-			// dataGridViewTextBoxColumn4
-			// 
-			this.dataGridViewTextBoxColumn4.DataPropertyName = "TipoUsuario";
-			this.dataGridViewTextBoxColumn4.HeaderText = "TipoUsuario";
-			this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
 			// 
 			// frmUsuarios
 			// 
@@ -408,6 +418,7 @@
 		private System.Windows.Forms.ComboBox tipoUsuarioComboBox;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Contrasenia;
 		private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
 	}
 }

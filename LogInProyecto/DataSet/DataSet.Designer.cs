@@ -32,6 +32,8 @@ namespace LogInProyecto.DataSet {
         
         private global::System.Data.DataRelation relationEstadoCivil_AlumnosLista;
         
+        private global::System.Data.DataRelation relationAlumnosLista_MatriculaAsignaturas;
+        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -245,6 +247,7 @@ namespace LogInProyecto.DataSet {
                 }
             }
             this.relationEstadoCivil_AlumnosLista = this.Relations["EstadoCivil_AlumnosLista"];
+            this.relationAlumnosLista_MatriculaAsignaturas = this.Relations["AlumnosLista_MatriculaAsignaturas"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -265,6 +268,10 @@ namespace LogInProyecto.DataSet {
                         this.tableEstadoCivil.IdColumn}, new global::System.Data.DataColumn[] {
                         this.tableAlumnosLista.EstadoCivilIdColumn}, false);
             this.Relations.Add(this.relationEstadoCivil_AlumnosLista);
+            this.relationAlumnosLista_MatriculaAsignaturas = new global::System.Data.DataRelation("AlumnosLista_MatriculaAsignaturas", new global::System.Data.DataColumn[] {
+                        this.tableAlumnosLista.IdColumn}, new global::System.Data.DataColumn[] {
+                        this.tableMatriculaAsignaturas.AlumnoIdColumn}, false);
+            this.Relations.Add(this.relationAlumnosLista_MatriculaAsignaturas);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1127,13 +1134,16 @@ namespace LogInProyecto.DataSet {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public MatriculaAsignaturasRow AddMatriculaAsignaturasRow(System.DateTime Fecha, int AlumnoId, bool Activo) {
+            public MatriculaAsignaturasRow AddMatriculaAsignaturasRow(System.DateTime Fecha, AlumnosListaRow parentAlumnosListaRowByAlumnosLista_MatriculaAsignaturas, bool Activo) {
                 MatriculaAsignaturasRow rowMatriculaAsignaturasRow = ((MatriculaAsignaturasRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         Fecha,
-                        AlumnoId,
+                        null,
                         Activo};
+                if ((parentAlumnosListaRowByAlumnosLista_MatriculaAsignaturas != null)) {
+                    columnValuesArray[2] = parentAlumnosListaRowByAlumnosLista_MatriculaAsignaturas[0];
+                }
                 rowMatriculaAsignaturasRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowMatriculaAsignaturasRow);
                 return rowMatriculaAsignaturasRow;
@@ -1542,6 +1552,17 @@ namespace LogInProyecto.DataSet {
             public void SetFotoNull() {
                 this[this.tableAlumnosLista.FotoColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public MatriculaAsignaturasRow[] GetMatriculaAsignaturasRows() {
+                if ((this.Table.ChildRelations["AlumnosLista_MatriculaAsignaturas"] == null)) {
+                    return new MatriculaAsignaturasRow[0];
+                }
+                else {
+                    return ((MatriculaAsignaturasRow[])(base.GetChildRows(this.Table.ChildRelations["AlumnosLista_MatriculaAsignaturas"])));
+                }
+            }
         }
         
         /// <summary>
@@ -1664,6 +1685,17 @@ namespace LogInProyecto.DataSet {
                 }
                 set {
                     this[this.tableMatriculaAsignaturas.ActivoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public AlumnosListaRow AlumnosListaRow {
+                get {
+                    return ((AlumnosListaRow)(this.GetParentRow(this.Table.ParentRelations["AlumnosLista_MatriculaAsignaturas"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["AlumnosLista_MatriculaAsignaturas"]);
                 }
             }
         }

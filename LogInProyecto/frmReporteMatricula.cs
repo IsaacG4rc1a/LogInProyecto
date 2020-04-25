@@ -18,13 +18,19 @@ namespace LogInProyecto
 		{
 			InitializeComponent();
 			var _Matri = new MatriculaBL();
-			var bindingSource = new BindingSource();
+			var _Alumno = new AlumnosBL();
 
+			var bindingSource = new BindingSource();
 			bindingSource.DataSource = _Matri.ObtenerMatricula();
 
-			var Report = new ReporteMatricula();
+			var bindingSource2 = new BindingSource();
+			bindingSource2.DataSource = _Alumno.ObtenerAlumnos();
 
-			Report.SetDataSource(bindingSource);
+			var Report = new ReporteMatricula();
+			//da error todavia
+			Report.Database.Tables["MatriculaAsignaturas"].SetDataSource(bindingSource);
+			Report.Database.Tables["AlumnosLista"].SetDataSource(bindingSource2);
+
 			crystalReportViewerMatricula.ReportSource = Report;
 			crystalReportViewerMatricula.RefreshReport();
 		}

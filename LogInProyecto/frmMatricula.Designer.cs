@@ -71,6 +71,8 @@
 			this.lblCANCELADA = new System.Windows.Forms.Label();
 			this.lblActiva = new System.Windows.Forms.Label();
 			this.lblVacio = new System.Windows.Forms.Label();
+			this.btnBusqueda = new System.Windows.Forms.Button();
+			this.txtBusqueda = new System.Windows.Forms.TextBox();
 			label2 = new System.Windows.Forms.Label();
 			activoLabel = new System.Windows.Forms.Label();
 			alumnoIdLabel = new System.Windows.Forms.Label();
@@ -191,7 +193,7 @@
             this.bindingNavigatorDeleteMatricula,
             this.matriculaAsignaturasBindingNavigatorSaveItem,
             this.toolStripCancelar});
-			this.matriculaAsignaturasBindingNavigator.Location = new System.Drawing.Point(245, 45);
+			this.matriculaAsignaturasBindingNavigator.Location = new System.Drawing.Point(62, 52);
 			this.matriculaAsignaturasBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
 			this.matriculaAsignaturasBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
 			this.matriculaAsignaturasBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
@@ -490,12 +492,31 @@
 			this.lblVacio.Text = "SIN REGISTROS";
 			this.lblVacio.Visible = false;
 			// 
+			// btnBusqueda
+			// 
+			this.btnBusqueda.Location = new System.Drawing.Point(681, 64);
+			this.btnBusqueda.Name = "btnBusqueda";
+			this.btnBusqueda.Size = new System.Drawing.Size(75, 23);
+			this.btnBusqueda.TabIndex = 39;
+			this.btnBusqueda.Text = "Buscar";
+			this.btnBusqueda.UseVisualStyleBackColor = true;
+			this.btnBusqueda.Click += new System.EventHandler(this.btnBusqueda_Click);
+			// 
+			// txtBusqueda
+			// 
+			this.txtBusqueda.Location = new System.Drawing.Point(556, 65);
+			this.txtBusqueda.Name = "txtBusqueda";
+			this.txtBusqueda.Size = new System.Drawing.Size(119, 20);
+			this.txtBusqueda.TabIndex = 40;
+			// 
 			// frmMatricula
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
 			this.ClientSize = new System.Drawing.Size(803, 482);
+			this.Controls.Add(this.txtBusqueda);
+			this.Controls.Add(this.btnBusqueda);
 			this.Controls.Add(this.lblVacio);
 			this.Controls.Add(this.lblActiva);
 			this.Controls.Add(this.lblCANCELADA);
@@ -568,5 +589,7 @@
 		private System.Windows.Forms.Label lblCANCELADA;
 		private System.Windows.Forms.Label lblActiva;
 		private System.Windows.Forms.Label lblVacio;
+		private System.Windows.Forms.Button btnBusqueda;
+		private System.Windows.Forms.TextBox txtBusqueda;
 	}
 }

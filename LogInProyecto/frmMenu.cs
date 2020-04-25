@@ -13,6 +13,7 @@ namespace LogInProyecto
 {
 	public partial class frmMenu : Form
 	{
+		string _Nombre;
 		public frmMenu()
 		{
 			InitializeComponent();
@@ -23,7 +24,6 @@ namespace LogInProyecto
 		{
 			Login();
 		}
-
 
 		private void btnCerrar_Click(object sender, EventArgs e)
 		{
@@ -57,15 +57,23 @@ namespace LogInProyecto
 		private void btnSalir_Click(object sender, EventArgs e)
 		{
 			frmLogIn frmLogin = new frmLogIn();
-			this.Hide();
-			frmLogin.Show();
+			var resultado = MessageBox.Show("¿Desea cerrar sesión? " + _Nombre, "Salir", MessageBoxButtons.YesNo);
+			if (resultado == DialogResult.Yes)
+			{
+				this.Hide();
+				frmLogin.Show();
+			}
 		}
 
 		private void lblSalir_Click(object sender, EventArgs e)
 		{
 			frmLogIn frmLogin = new frmLogIn();
-			this.Hide();
-			frmLogin.Show();
+			var resultado = MessageBox.Show("¿Desea cerrar sesión? " + _Nombre, "Salir", MessageBoxButtons.YesNo);
+			if (resultado == DialogResult.Yes)
+			{
+				this.Hide();
+				frmLogin.Show();
+			}
 		}
 
 		private void btnAlumnos_Click(object sender, EventArgs e)
@@ -182,8 +190,29 @@ namespace LogInProyecto
 		{
 			if (Program.UsuarioLogueado != null)
 			{
-				var Nombre = Program.UsuarioLogueado.Usuario.ToUpper();
-				toolStripStatusLabel1.Text = "Usuario: " + Nombre;
+				_Nombre = Program.UsuarioLogueado.Usuario.ToUpper();
+				toolStripStatusLabel1.Text = "Usuario: " + _Nombre;
+			}
+
+			//Administrador
+			//Gerencia
+			//Secretaría
+
+			if (Program.UsuarioLogueado.TipoUsuario == "Gerencia")
+			{
+				btnSeguridad.Visible = false;
+				btnAsignaturas.Enabled = false;
+				btnCarreras.Enabled = false;
+				btnDocentes.Enabled = false;
+				btnAlumnos.Enabled = false;
+			}
+			if (Program.UsuarioLogueado.TipoUsuario == "Secretaría")
+			{
+				btnSeguridad.Visible = false;
+				btnDocentes.Enabled = false;
+				btnAsignaturas.Enabled = false;
+				btnCarreras.Enabled = false;
+				btnReportDocentes.Enabled = false;
 			}
 		}
 		// Final #2

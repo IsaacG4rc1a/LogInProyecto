@@ -20,12 +20,24 @@ namespace Universidad.BL
 			
 		}
 
+		public BindingList<AlumnosLista> ObtenerAlumn(string busqueda)
+		{
+			var query = _contexto.tbAlumnos
+					.Where(p => p.Nombres.ToLower()
+						.Contains(busqueda.ToLower()) == true)
+							.ToList();
+
+			var resultado = new BindingList<AlumnosLista>(query);
+
+			return resultado;
+		}
+
 		public BindingList<AlumnosLista> ObtenerAlumnos()
 		{
-            _contexto.tbAlumnos.Load();
+			_contexto.tbAlumnos.Load();
 
+			ListaAlumno = _contexto.tbAlumnos.Local.ToBindingList();
 
-            ListaAlumno = _contexto.tbAlumnos.Local.ToBindingList();
 			return ListaAlumno;
 		}
 

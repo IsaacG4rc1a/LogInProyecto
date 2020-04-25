@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -79,6 +80,33 @@ namespace Universidad.BL
 
 			Docent2.Nombres = "Samuel Lainez";
 			context.tbDocentes.Add(Docent2);
+
+			///////////////////////////////////////// Listado de alumnos cvs ///////////////////////////////////////////
+			var archivo = "../../../AlumnosListado.csv";
+
+			using (var reader = new StreamReader(archivo))
+			{
+				reader.ReadLine(); //Lea fila encabezado
+
+				while (!reader.EndOfStream)
+				{
+					var linea = reader.ReadLine();
+					var valores = linea.Split(',');
+
+					var AlumnoNuevo = new AlumnosLista();
+
+					AlumnoNuevo.Nombres = valores[0].ToString();
+					AlumnoNuevo.Apellidos = valores[1].ToString();
+					AlumnoNuevo.Sexo = valores[2].ToString();
+					AlumnoNuevo.EstadoCivilId = int.Parse(valores[3].ToString());
+					AlumnoNuevo.Telefono = valores[4].ToString();
+					AlumnoNuevo.Direccion = valores[5].ToString();
+					//AlumnoNuevo.Foto = .Parse(valores[6].ToString());
+					AlumnoNuevo.Activo = bool.Parse(valores[7].ToString());
+
+					context.tbAlumnos.Add(AlumnoNuevo);
+				}
+			}
 
 			base.Seed(context);
 		}

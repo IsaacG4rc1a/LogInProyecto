@@ -15,6 +15,7 @@ namespace LogInProyecto
 		public Bienvenida()
 		{
 			InitializeComponent();
+			label3.Text = Program.UsuarioLogueado.Usuario.ToUpper();
 		}
 		
 		private void timer1_Tick(object sender, EventArgs e)

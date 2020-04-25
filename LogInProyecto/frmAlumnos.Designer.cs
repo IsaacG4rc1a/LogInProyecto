@@ -55,7 +55,6 @@
 			this.direccionTextBox = new System.Windows.Forms.TextBox();
 			this.idTextBox = new System.Windows.Forms.TextBox();
 			this.nombresTextBox = new System.Windows.Forms.TextBox();
-			this.sexoTextBox = new System.Windows.Forms.TextBox();
 			this.telefonoTextBox = new System.Windows.Forms.TextBox();
 			this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
 			this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
@@ -77,6 +76,9 @@
 			this.ofpElegirFoto = new System.Windows.Forms.OpenFileDialog();
 			this.estadoCivilIdComboBox = new System.Windows.Forms.ComboBox();
 			this.estadoCivilBindingSource = new System.Windows.Forms.BindingSource(this.components);
+			this.btnBuscar = new System.Windows.Forms.Button();
+			this.txtBusqueda = new System.Windows.Forms.TextBox();
+			this.sexoTextBox = new System.Windows.Forms.TextBox();
 			label2 = new System.Windows.Forms.Label();
 			activoLabel = new System.Windows.Forms.Label();
 			apellidosLabel = new System.Windows.Forms.Label();
@@ -112,7 +114,7 @@
 			activoLabel.AutoSize = true;
 			activoLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			activoLabel.ForeColor = System.Drawing.Color.Transparent;
-			activoLabel.Location = new System.Drawing.Point(293, 187);
+			activoLabel.Location = new System.Drawing.Point(298, 211);
 			activoLabel.Name = "activoLabel";
 			activoLabel.Size = new System.Drawing.Size(62, 20);
 			activoLabel.TabIndex = 20;
@@ -123,7 +125,7 @@
 			apellidosLabel.AutoSize = true;
 			apellidosLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			apellidosLabel.ForeColor = System.Drawing.Color.Transparent;
-			apellidosLabel.Location = new System.Drawing.Point(76, 162);
+			apellidosLabel.Location = new System.Drawing.Point(81, 186);
 			apellidosLabel.Name = "apellidosLabel";
 			apellidosLabel.Size = new System.Drawing.Size(79, 20);
 			apellidosLabel.TabIndex = 22;
@@ -134,7 +136,7 @@
 			direccionLabel.AutoSize = true;
 			direccionLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			direccionLabel.ForeColor = System.Drawing.Color.Transparent;
-			direccionLabel.Location = new System.Drawing.Point(271, 157);
+			direccionLabel.Location = new System.Drawing.Point(276, 181);
 			direccionLabel.Name = "direccionLabel";
 			direccionLabel.Size = new System.Drawing.Size(84, 20);
 			direccionLabel.TabIndex = 24;
@@ -145,7 +147,7 @@
 			idLabel.AutoSize = true;
 			idLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			idLabel.ForeColor = System.Drawing.Color.Transparent;
-			idLabel.Location = new System.Drawing.Point(76, 110);
+			idLabel.Location = new System.Drawing.Point(81, 134);
 			idLabel.Name = "idLabel";
 			idLabel.Size = new System.Drawing.Size(28, 20);
 			idLabel.TabIndex = 28;
@@ -156,7 +158,7 @@
 			nombresLabel.AutoSize = true;
 			nombresLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			nombresLabel.ForeColor = System.Drawing.Color.Transparent;
-			nombresLabel.Location = new System.Drawing.Point(76, 136);
+			nombresLabel.Location = new System.Drawing.Point(81, 160);
 			nombresLabel.Name = "nombresLabel";
 			nombresLabel.Size = new System.Drawing.Size(78, 20);
 			nombresLabel.TabIndex = 30;
@@ -167,7 +169,7 @@
 			sexoLabel.AutoSize = true;
 			sexoLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			sexoLabel.ForeColor = System.Drawing.Color.Transparent;
-			sexoLabel.Location = new System.Drawing.Point(76, 188);
+			sexoLabel.Location = new System.Drawing.Point(81, 212);
 			sexoLabel.Name = "sexoLabel";
 			sexoLabel.Size = new System.Drawing.Size(47, 20);
 			sexoLabel.TabIndex = 32;
@@ -178,7 +180,7 @@
 			telefonoLabel.AutoSize = true;
 			telefonoLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			telefonoLabel.ForeColor = System.Drawing.Color.Transparent;
-			telefonoLabel.Location = new System.Drawing.Point(279, 131);
+			telefonoLabel.Location = new System.Drawing.Point(284, 155);
 			telefonoLabel.Name = "telefonoLabel";
 			telefonoLabel.Size = new System.Drawing.Size(75, 20);
 			telefonoLabel.TabIndex = 34;
@@ -189,7 +191,7 @@
 			estadoCivilIdLabel.AutoSize = true;
 			estadoCivilIdLabel.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			estadoCivilIdLabel.ForeColor = System.Drawing.Color.Transparent;
-			estadoCivilIdLabel.Location = new System.Drawing.Point(265, 104);
+			estadoCivilIdLabel.Location = new System.Drawing.Point(270, 128);
 			estadoCivilIdLabel.Name = "estadoCivilIdLabel";
 			estadoCivilIdLabel.Size = new System.Drawing.Size(97, 20);
 			estadoCivilIdLabel.TabIndex = 39;
@@ -293,7 +295,7 @@
 			// activoCheckBox
 			// 
 			this.activoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.alumnosListaBindingSource, "Activo", true));
-			this.activoCheckBox.Location = new System.Drawing.Point(362, 187);
+			this.activoCheckBox.Location = new System.Drawing.Point(367, 211);
 			this.activoCheckBox.Name = "activoCheckBox";
 			this.activoCheckBox.Size = new System.Drawing.Size(104, 24);
 			this.activoCheckBox.TabIndex = 21;
@@ -302,7 +304,7 @@
 			// apellidosTextBox
 			// 
 			this.apellidosTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.alumnosListaBindingSource, "Apellidos", true));
-			this.apellidosTextBox.Location = new System.Drawing.Point(160, 159);
+			this.apellidosTextBox.Location = new System.Drawing.Point(165, 183);
 			this.apellidosTextBox.Name = "apellidosTextBox";
 			this.apellidosTextBox.Size = new System.Drawing.Size(104, 20);
 			this.apellidosTextBox.TabIndex = 23;
@@ -310,7 +312,7 @@
 			// direccionTextBox
 			// 
 			this.direccionTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.alumnosListaBindingSource, "Direccion", true));
-			this.direccionTextBox.Location = new System.Drawing.Point(362, 159);
+			this.direccionTextBox.Location = new System.Drawing.Point(367, 183);
 			this.direccionTextBox.Name = "direccionTextBox";
 			this.direccionTextBox.Size = new System.Drawing.Size(158, 20);
 			this.direccionTextBox.TabIndex = 25;
@@ -319,7 +321,7 @@
 			// 
 			this.idTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.alumnosListaBindingSource, "Id", true));
 			this.idTextBox.Enabled = false;
-			this.idTextBox.Location = new System.Drawing.Point(160, 107);
+			this.idTextBox.Location = new System.Drawing.Point(165, 131);
 			this.idTextBox.Name = "idTextBox";
 			this.idTextBox.Size = new System.Drawing.Size(104, 20);
 			this.idTextBox.TabIndex = 29;
@@ -327,23 +329,15 @@
 			// nombresTextBox
 			// 
 			this.nombresTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.alumnosListaBindingSource, "Nombres", true));
-			this.nombresTextBox.Location = new System.Drawing.Point(160, 133);
+			this.nombresTextBox.Location = new System.Drawing.Point(165, 157);
 			this.nombresTextBox.Name = "nombresTextBox";
 			this.nombresTextBox.Size = new System.Drawing.Size(104, 20);
 			this.nombresTextBox.TabIndex = 31;
 			// 
-			// sexoTextBox
-			// 
-			this.sexoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.alumnosListaBindingSource, "Sexo", true));
-			this.sexoTextBox.Location = new System.Drawing.Point(160, 185);
-			this.sexoTextBox.Name = "sexoTextBox";
-			this.sexoTextBox.Size = new System.Drawing.Size(104, 20);
-			this.sexoTextBox.TabIndex = 33;
-			// 
 			// telefonoTextBox
 			// 
 			this.telefonoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.alumnosListaBindingSource, "Telefono", true));
-			this.telefonoTextBox.Location = new System.Drawing.Point(362, 133);
+			this.telefonoTextBox.Location = new System.Drawing.Point(367, 157);
 			this.telefonoTextBox.Name = "telefonoTextBox";
 			this.telefonoTextBox.Size = new System.Drawing.Size(138, 20);
 			this.telefonoTextBox.TabIndex = 35;
@@ -529,7 +523,7 @@
 			this.estadoCivilIdComboBox.DataSource = this.estadoCivilBindingSource;
 			this.estadoCivilIdComboBox.DisplayMember = "Descripcion";
 			this.estadoCivilIdComboBox.FormattingEnabled = true;
-			this.estadoCivilIdComboBox.Location = new System.Drawing.Point(362, 106);
+			this.estadoCivilIdComboBox.Location = new System.Drawing.Point(367, 130);
 			this.estadoCivilIdComboBox.Name = "estadoCivilIdComboBox";
 			this.estadoCivilIdComboBox.Size = new System.Drawing.Size(138, 21);
 			this.estadoCivilIdComboBox.TabIndex = 40;
@@ -539,12 +533,40 @@
 			// 
 			this.estadoCivilBindingSource.DataSource = typeof(Universidad.BL.EstadoCivil);
 			// 
+			// btnBuscar
+			// 
+			this.btnBuscar.Location = new System.Drawing.Point(274, 94);
+			this.btnBuscar.Name = "btnBuscar";
+			this.btnBuscar.Size = new System.Drawing.Size(83, 20);
+			this.btnBuscar.TabIndex = 41;
+			this.btnBuscar.Text = "Buscar";
+			this.btnBuscar.UseVisualStyleBackColor = true;
+			this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+			// 
+			// txtBusqueda
+			// 
+			this.txtBusqueda.Location = new System.Drawing.Point(92, 94);
+			this.txtBusqueda.Name = "txtBusqueda";
+			this.txtBusqueda.Size = new System.Drawing.Size(177, 20);
+			this.txtBusqueda.TabIndex = 42;
+			this.txtBusqueda.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtBusqueda_MouseClick);
+			// 
+			// sexoTextBox
+			// 
+			this.sexoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.alumnosListaBindingSource, "Sexo", true));
+			this.sexoTextBox.Location = new System.Drawing.Point(165, 209);
+			this.sexoTextBox.Name = "sexoTextBox";
+			this.sexoTextBox.Size = new System.Drawing.Size(104, 20);
+			this.sexoTextBox.TabIndex = 33;
+			// 
 			// frmAlumnos
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
 			this.ClientSize = new System.Drawing.Size(819, 477);
+			this.Controls.Add(this.txtBusqueda);
+			this.Controls.Add(this.btnBuscar);
 			this.Controls.Add(estadoCivilIdLabel);
 			this.Controls.Add(this.estadoCivilIdComboBox);
 			this.Controls.Add(this.btnQuitarFoto);
@@ -604,7 +626,6 @@
 		private System.Windows.Forms.TextBox direccionTextBox;
 		private System.Windows.Forms.TextBox idTextBox;
 		private System.Windows.Forms.TextBox nombresTextBox;
-		private System.Windows.Forms.TextBox sexoTextBox;
 		private System.Windows.Forms.TextBox telefonoTextBox;
 		private System.Windows.Forms.BindingNavigator bindingNavigator1;
 		private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
@@ -626,5 +647,8 @@
 		private System.Windows.Forms.OpenFileDialog ofpElegirFoto;
 		private System.Windows.Forms.ComboBox estadoCivilIdComboBox;
 		private System.Windows.Forms.BindingSource estadoCivilBindingSource;
+		private System.Windows.Forms.Button btnBuscar;
+		private System.Windows.Forms.TextBox txtBusqueda;
+		private System.Windows.Forms.TextBox sexoTextBox;
 	}
 }

@@ -138,6 +138,7 @@ namespace LogInProyecto
 			EliminarLinea(0);
 		}
 
+		//Buscador
         private void frmAlumnos_Load(object sender, EventArgs e)
         {
 
@@ -171,6 +172,27 @@ namespace LogInProyecto
 		private void btnQuitarFoto_Click(object sender, EventArgs e) ////FALTAN CORRECIONES GUARDAR FOTO NULA
 		{
 			fotoPictureBox.Image = null;
+		}
+
+		private void txtBusqueda_MouseClick(object sender, MouseEventArgs e)
+		{
+			txtBusqueda.Text = "";
+		}
+
+		private void btnBuscar_Click(object sender, EventArgs e)
+		{
+			var busqueda = txtBusqueda.Text;
+
+			if (string.IsNullOrEmpty(busqueda) == true)
+			{
+				alumnosListaBindingSource.DataSource = _Alumnos.ObtenerAlumnos();
+			}
+			else
+			{
+				alumnosListaBindingSource.DataSource = _Alumnos.ObtenerAlumn(busqueda);
+			}
+
+			alumnosListaBindingSource.ResetBindings(false);
 		}
 	}
 }

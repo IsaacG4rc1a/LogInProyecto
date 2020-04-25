@@ -103,5 +103,10 @@ namespace LogInProyecto
 			ActivarDesactivarBotones(true);
 			EliminarLinea(0);
 		}
+
+		private void contraseniaTextBox_TextChanged(object sender, EventArgs e)
+		{
+			contraseniaTextBox.UseSystemPasswordChar = true;
+		}
 	}
 }
