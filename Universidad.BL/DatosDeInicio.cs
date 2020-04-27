@@ -98,9 +98,9 @@ namespace Universidad.BL
 					AlumnoNuevo.Nombres = valores[0].ToString();
 					AlumnoNuevo.Apellidos = valores[1].ToString();
 					AlumnoNuevo.Sexo = valores[2].ToString();
-					AlumnoNuevo.EstadoCivilId = int.Parse(valores[3].ToString());
-					AlumnoNuevo.Telefono = valores[4].ToString();
-					AlumnoNuevo.Direccion = valores[5].ToString();
+					AlumnoNuevo.EstadoCivil = Ec;
+					AlumnoNuevo.Telefono = valores[5].ToString();
+					AlumnoNuevo.Direccion = valores[4].ToString();
 					//AlumnoNuevo.Foto = .Parse(valores[6].ToString());
 					AlumnoNuevo.Activo = bool.Parse(valores[7].ToString());
 

@@ -190,17 +190,17 @@ namespace LogInProyecto
 
 		private void btnBusqueda_Click(object sender, EventArgs e)
 		{
-			var busqueda = txtBusqueda.Text;
-			var nombre = alumnoIdComboBox.Text;
+			//var busqueda = txtBusqueda.Text;
+			//var nombre = alumnoIdComboBox.Text;
 
-			if (string.IsNullOrEmpty(busqueda) == true)
-			{
-				matriculaAsignaturasBindingSource.DataSource = _matriculaBL.ObtenerMatricula();
-			}
-			else
-			{
-				//matriculaAsignaturasBindingSource.DataSource = _matriculaBL.ObtenerMatriculas(busqueda, nombre);
-			}
+			//if (string.IsNullOrEmpty(busqueda) == true)
+			//{
+			//	matriculaAsignaturasBindingSource.DataSource = _matriculaBL.ObtenerMatricula();
+			//}
+			//else
+			//{
+			//	matriculaAsignaturasBindingSource.DataSource = _matriculaBL.ObtenerMatriculas(busqueda);
+			//}
 		}
 	}
 }

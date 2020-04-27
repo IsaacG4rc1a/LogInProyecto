@@ -18,15 +18,19 @@ namespace Universidad.BL
 			_contexto = new ContextoBD();
 		}
 
-		public BindingList<MatriculaAsignaturas> ObtenerMatriculas(string Busqueda)
-		{
-			_contexto.tbMatricula.Include("MatriculaDetalle").Load();
+		//public BindingList<MatriculaAsignaturas> ObtenerMatriculas(string Busqueda)
+		//{
+		//	_contexto.tbMatricula.Include("MatriculaDetalle").Load();
 
-			//var query = _contexto.tbMatricula.Where(p => p.AlumnoId.().Contains().ToString());
-			ListaMatricula = _contexto.tbMatricula.Local.ToBindingList();
+		//	var query = _contexto.tbMatricula.Include("Alumno")
+		//			.Where(p => p.Alumno.Nombres
+		//				.Contains(Busqueda.ToLower()) == true)
+		//					.ToList();
 
-			return ListaMatricula;
-		}
+		//	ListaMatricula = _contexto.tbMatricula.Local.ToBindingList();
+
+		//	return ListaMatricula;
+		//}
 
 		public BindingList<MatriculaAsignaturas> ObtenerMatricula()
 		{
