@@ -235,11 +235,30 @@ namespace Universidad.BL
 		public int Id { get; set; }
 		public string Descripcion { get; set; }
 		public int Cupo { get; set; }
+		public int CarreraId { get; set; }
+		public Carrera Carreras { get; set; }
 	}
 
 	public class DocentesLista
 	{
 		public int Id { get; set; }
 		public string Nombres { get; set; }
+		public string Apellidos { get; set; }
+		public DateTime FechaNacimiento { get; set; }
+		public string Sexo { get; set; }
+		public int EstadoCivilId { get; set; }
+		public EstadoCivil EstadoCivil { get; set; }
+		public string Telefono { get; set; }
+		public string Domicilio { get; set; }
+		public string AreaDesempenio { get; set; }
+		public int FacultadId { get; set; }
+		public Facultades Facultad { get; set; }
+		public bool Activo { get; set; }
+
+		public DocentesLista()
+		{
+			Activo = true;
+			FechaNacimiento = DateTime.Now;
+		}
 	}
 }

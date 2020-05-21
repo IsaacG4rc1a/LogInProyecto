@@ -38,8 +38,8 @@ namespace LogInProyecto
 
 		private void btnAsignaturas_Click(object sender, EventArgs e)
 		{
-			frmAsignaturas frmAsig = new frmAsignaturas();
-			frmAsig.ShowDialog();
+			OcultarMenus();
+			AbrirfrmHijo(new frmAsignaturas());
 		}
 
 		[DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -152,7 +152,8 @@ namespace LogInProyecto
 
 		private void btnDocentes_Click(object sender, EventArgs e)
 		{
-
+			OcultarMenus();
+			AbrirfrmHijo(new frmRegistroDocentes());
 		}
 
 		private void btnMatricula_Click(object sender, EventArgs e)
@@ -214,6 +215,12 @@ namespace LogInProyecto
 				btnCarreras.Enabled = false;
 				btnReportDocentes.Enabled = false;
 			}
+		}
+
+		private void btnCarreras_Click(object sender, EventArgs e)
+		{
+			OcultarMenus();
+			AbrirfrmHijo(new frmCarreras());
 		}
 		// Final #2
 

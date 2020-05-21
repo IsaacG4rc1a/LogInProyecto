@@ -69,6 +69,7 @@
     <Compile Include="AlumnosBL.cs" />
     <Compile Include="AlumnosLista.cs" />
     <Compile Include="AsignaturasBL.cs" />
+    <Compile Include="CarrerasBL.cs" />
     <Compile Include="ContextoBD.cs" />
     <Compile Include="DatosDeInicio.cs" />
     <Compile Include="DocentesBL.cs" />

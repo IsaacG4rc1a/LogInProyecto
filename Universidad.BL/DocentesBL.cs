@@ -75,8 +75,63 @@ namespace Universidad.BL
 		{
 			var res = new Resultado();
 			res.Exitoso = true;
+			if (Docentes == null)
+			{
+				res.Mensaje = "Agregue un Docente válido.";
+				res.Exitoso = false;
 
+				return res;
+			}
+
+			if (string.IsNullOrEmpty(Docentes.Nombres) == true)
+			{
+				res.Mensaje = "Ingrese un Nombre";
+				res.Exitoso = false;
+				return res;
+			}
+			if (string.IsNullOrEmpty(Docentes.Apellidos) == true)
+			{
+				res.Mensaje = "Ingrese un Apellido";
+				res.Exitoso = false;
+				return res;
+			}
+			if (string.IsNullOrEmpty(Docentes.Sexo) == true)
+			{
+				res.Mensaje = "Ingrese el Sexo";
+				res.Exitoso = false;
+				return res;
+			}
+			if (Convert.ToBoolean(Docentes.EstadoCivilId) == false)
+			{
+				res.Mensaje = "Ingrese el Estado civil";
+				res.Exitoso = false;
+				return res;
+			}
+			if (string.IsNullOrEmpty(Docentes.Telefono) == true)
+			{
+				res.Mensaje = "Ingrese el Número de teléfono";
+				res.Exitoso = false;
+				return res;
+			}
+			if (string.IsNullOrEmpty(Docentes.Domicilio) == true)
+			{
+				res.Mensaje = "Ingrese el Domicilio";
+				res.Exitoso = false;
+				return res;
+			}
 			return res;
+		}
+
+		public BindingList<DocentesLista> ObtenerDocentesBusqueda(string busqueda)
+		{
+			var query = _contexto.tbDocentes
+					.Where(p => p.Nombres.ToLower()
+						.Contains(busqueda.ToLower()) == true)
+							.ToList();
+
+			var resultado = new BindingList<DocentesLista>(query);
+
+			return resultado;
 		}
 	}
 

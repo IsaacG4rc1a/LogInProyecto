@@ -38,7 +38,7 @@ namespace Universidad.BL
 			return resultado;
 		}
 
-		public void AgregarMatricula()
+		public void AgregarAsignatura()
 		{
 			var NuevaAsignatura = new AsignaturasLista();
 			ListaAsignaturas.Add(NuevaAsignatura);
@@ -76,6 +76,24 @@ namespace Universidad.BL
 				res.Mensaje = "Agregue una Asignatura válida.";
 				res.Exitoso = false;
 
+				return res;
+			}
+			if (string.IsNullOrEmpty(Asignatura.Descripcion) == true)
+			{
+				res.Mensaje = "Ingrese una descripción";
+				res.Exitoso = false;
+				return res;
+			}
+			if (Asignatura.Cupo <= 0)
+			{
+				res.Mensaje = "Ingrese una Cantidad";
+				res.Exitoso = false;
+				return res;
+			}
+			if (string.IsNullOrEmpty(Convert.ToString(Asignatura.CarreraId)) != false)
+			{
+				res.Mensaje = "Ingrese una Carrera";
+				res.Exitoso = false;
 				return res;
 			}
 			res.Exitoso = true;

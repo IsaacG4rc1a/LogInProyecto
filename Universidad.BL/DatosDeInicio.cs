@@ -45,41 +45,56 @@ namespace Universidad.BL
 			context.tbEstadoCivil.Add(Ec4);
 
 			///////////////////////////////////////////Datos de inicio - Asignaturas///////////////////////////////////
-			var Asig = new AsignaturasLista();
+			//var Asig = new AsignaturasLista();
 
-			Asig.Descripcion = "Espaniol General";
-			Asig.Cupo = 20;
-			context.tbAsignaturas.Add(Asig);
+			//Asig.Descripcion = "Espaniol General";
+			//Asig.Cupo = 20;
+			//context.tbAsignaturas.Add(Asig);
 
-			var Asig2 = new AsignaturasLista();
+			//var Asig2 = new AsignaturasLista();
 
-			Asig2.Descripcion = "Redaccion General";
-			Asig2.Cupo = 20;
-			context.tbAsignaturas.Add(Asig2);
+			//Asig2.Descripcion = "Redaccion General";
+			//Asig2.Cupo = 20;
+			//context.tbAsignaturas.Add(Asig2);
 
-			var Asig3 = new AsignaturasLista();
+			//var Asig3 = new AsignaturasLista();
 
-			Asig3.Descripcion = "Filosofia";
-			Asig3.Cupo = 20;
-			context.tbAsignaturas.Add(Asig3);
+			//Asig3.Descripcion = "Filosofia";
+			//Asig3.Cupo = 20;
+			//context.tbAsignaturas.Add(Asig3);
 
 
-			var Asig4 = new AsignaturasLista();
+			//var Asig4 = new AsignaturasLista();
 
-			Asig4.Descripcion = "Historia de Honduras";
-			Asig4.Cupo = 20;
-			context.tbAsignaturas.Add(Asig4);
+			//Asig4.Descripcion = "Historia de Honduras";
+			//Asig4.Cupo = 20;
+			//context.tbAsignaturas.Add(Asig4);
 
 			///////////////////////////////////////////Datos de inicio - Docentes/////////////////////////////////////
-			var Docent = new DocentesLista();
+			var Facultad = new Facultades();
 
-			Docent.Nombres = "Raul Jimenez";
-			context.tbDocentes.Add(Docent);
+			Facultad.Descripcion = "Ingeniería";
+			context.tbFacultades.Add(Facultad);
 
-			var Docent2 = new DocentesLista();
+			var Facultad2 = new Facultades();
 
-			Docent2.Nombres = "Samuel Lainez";
-			context.tbDocentes.Add(Docent2);
+			Facultad2.Descripcion = "Odontología";
+			context.tbFacultades.Add(Facultad2);
+
+			var Facultad3 = new Facultades();
+
+			Facultad3.Descripcion = "Humanidades y Artes";
+			context.tbFacultades.Add(Facultad3);
+
+			var Facultad4 = new Facultades();
+
+			Facultad4.Descripcion = "Ciencias Espaciales";
+			context.tbFacultades.Add(Facultad4);
+
+			var Facultad5 = new Facultades();
+
+			Facultad5.Descripcion = "Ciencias Económicas, Administrativas y Contables";
+			context.tbFacultades.Add(Facultad5);
 
 			///////////////////////////////////////// Listado de alumnos cvs ///////////////////////////////////////////
 			var archivo = "../../../AlumnosListado.csv";

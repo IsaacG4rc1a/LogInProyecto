@@ -217,6 +217,7 @@
 			this.btnCarreras.TabIndex = 3;
 			this.btnCarreras.Text = "Carreras";
 			this.btnCarreras.UseVisualStyleBackColor = false;
+			this.btnCarreras.Click += new System.EventHandler(this.btnCarreras_Click);
 			// 
 			// btnAlumnos
 			// 

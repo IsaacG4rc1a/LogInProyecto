@@ -41,6 +41,13 @@
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAlumnos));
 			this.label1 = new System.Windows.Forms.Label();
 			this.ListaAlumnosDataGridView = new System.Windows.Forms.DataGridView();
+			this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
 			this.alumnosListaBindingSource = new System.Windows.Forms.BindingSource(this.components);
 			this.activoCheckBox = new System.Windows.Forms.CheckBox();
 			this.apellidosTextBox = new System.Windows.Forms.TextBox();
@@ -71,13 +78,6 @@
 			this.btnBuscar = new System.Windows.Forms.Button();
 			this.txtBusqueda = new System.Windows.Forms.TextBox();
 			this.sexoTextBox = new System.Windows.Forms.TextBox();
-			this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
 			label2 = new System.Windows.Forms.Label();
 			activoLabel = new System.Windows.Forms.Label();
 			apellidosLabel = new System.Windows.Forms.Label();
@@ -225,10 +225,59 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewCheckBoxColumn1});
 			this.ListaAlumnosDataGridView.DataSource = this.alumnosListaBindingSource;
-			this.ListaAlumnosDataGridView.Location = new System.Drawing.Point(80, 245);
+			this.ListaAlumnosDataGridView.Location = new System.Drawing.Point(85, 245);
 			this.ListaAlumnosDataGridView.Name = "ListaAlumnosDataGridView";
 			this.ListaAlumnosDataGridView.Size = new System.Drawing.Size(626, 220);
 			this.ListaAlumnosDataGridView.TabIndex = 0;
+			// 
+			// dataGridViewTextBoxColumn1
+			// 
+			this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
+			this.dataGridViewTextBoxColumn1.HeaderText = "Id";
+			this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+			this.dataGridViewTextBoxColumn1.Width = 41;
+			// 
+			// dataGridViewTextBoxColumn2
+			// 
+			this.dataGridViewTextBoxColumn2.DataPropertyName = "Nombres";
+			this.dataGridViewTextBoxColumn2.HeaderText = "Nombres";
+			this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+			this.dataGridViewTextBoxColumn2.Width = 74;
+			// 
+			// dataGridViewTextBoxColumn3
+			// 
+			this.dataGridViewTextBoxColumn3.DataPropertyName = "Apellidos";
+			this.dataGridViewTextBoxColumn3.HeaderText = "Apellidos";
+			this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+			this.dataGridViewTextBoxColumn3.Width = 74;
+			// 
+			// dataGridViewTextBoxColumn4
+			// 
+			this.dataGridViewTextBoxColumn4.DataPropertyName = "Sexo";
+			this.dataGridViewTextBoxColumn4.HeaderText = "Sexo";
+			this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+			this.dataGridViewTextBoxColumn4.Width = 56;
+			// 
+			// dataGridViewTextBoxColumn6
+			// 
+			this.dataGridViewTextBoxColumn6.DataPropertyName = "Telefono";
+			this.dataGridViewTextBoxColumn6.HeaderText = "Telefono";
+			this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+			this.dataGridViewTextBoxColumn6.Width = 74;
+			// 
+			// dataGridViewTextBoxColumn7
+			// 
+			this.dataGridViewTextBoxColumn7.DataPropertyName = "Direccion";
+			this.dataGridViewTextBoxColumn7.HeaderText = "Direccion";
+			this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+			this.dataGridViewTextBoxColumn7.Width = 77;
+			// 
+			// dataGridViewCheckBoxColumn1
+			// 
+			this.dataGridViewCheckBoxColumn1.DataPropertyName = "Activo";
+			this.dataGridViewCheckBoxColumn1.HeaderText = "Activo";
+			this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+			this.dataGridViewCheckBoxColumn1.Width = 43;
 			// 
 			// alumnosListaBindingSource
 			// 
@@ -265,6 +314,7 @@
 			this.idTextBox.Enabled = false;
 			this.idTextBox.Location = new System.Drawing.Point(165, 131);
 			this.idTextBox.Name = "idTextBox";
+			this.idTextBox.ReadOnly = true;
 			this.idTextBox.Size = new System.Drawing.Size(104, 20);
 			this.idTextBox.TabIndex = 29;
 			// 
@@ -437,22 +487,32 @@
 			// 
 			// btnAgregarFoto
 			// 
-			this.btnAgregarFoto.Location = new System.Drawing.Point(556, 195);
+			this.btnAgregarFoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(97)))), ((int)(((byte)(238)))));
+			this.btnAgregarFoto.FlatAppearance.BorderSize = 0;
+			this.btnAgregarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnAgregarFoto.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnAgregarFoto.ForeColor = System.Drawing.Color.Transparent;
+			this.btnAgregarFoto.Location = new System.Drawing.Point(556, 185);
 			this.btnAgregarFoto.Name = "btnAgregarFoto";
-			this.btnAgregarFoto.Size = new System.Drawing.Size(75, 23);
+			this.btnAgregarFoto.Size = new System.Drawing.Size(157, 24);
 			this.btnAgregarFoto.TabIndex = 38;
 			this.btnAgregarFoto.Text = "Agregar foto";
-			this.btnAgregarFoto.UseVisualStyleBackColor = true;
+			this.btnAgregarFoto.UseVisualStyleBackColor = false;
 			this.btnAgregarFoto.Click += new System.EventHandler(this.btnAgregarFoto_Click);
 			// 
 			// btnQuitarFoto
 			// 
-			this.btnQuitarFoto.Location = new System.Drawing.Point(637, 195);
+			this.btnQuitarFoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(97)))), ((int)(((byte)(238)))));
+			this.btnQuitarFoto.FlatAppearance.BorderSize = 0;
+			this.btnQuitarFoto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnQuitarFoto.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnQuitarFoto.ForeColor = System.Drawing.Color.Transparent;
+			this.btnQuitarFoto.Location = new System.Drawing.Point(556, 212);
 			this.btnQuitarFoto.Name = "btnQuitarFoto";
-			this.btnQuitarFoto.Size = new System.Drawing.Size(75, 23);
+			this.btnQuitarFoto.Size = new System.Drawing.Size(157, 23);
 			this.btnQuitarFoto.TabIndex = 39;
 			this.btnQuitarFoto.Text = "Quitar foto";
-			this.btnQuitarFoto.UseVisualStyleBackColor = true;
+			this.btnQuitarFoto.UseVisualStyleBackColor = false;
 			this.btnQuitarFoto.Click += new System.EventHandler(this.btnQuitarFoto_Click);
 			// 
 			// ofpElegirFoto
@@ -477,12 +537,17 @@
 			// 
 			// btnBuscar
 			// 
-			this.btnBuscar.Location = new System.Drawing.Point(274, 94);
+			this.btnBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(97)))), ((int)(((byte)(238)))));
+			this.btnBuscar.FlatAppearance.BorderSize = 0;
+			this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 11.25F);
+			this.btnBuscar.ForeColor = System.Drawing.Color.White;
+			this.btnBuscar.Location = new System.Drawing.Point(274, 90);
 			this.btnBuscar.Name = "btnBuscar";
-			this.btnBuscar.Size = new System.Drawing.Size(83, 20);
+			this.btnBuscar.Size = new System.Drawing.Size(83, 25);
 			this.btnBuscar.TabIndex = 41;
 			this.btnBuscar.Text = "Buscar";
-			this.btnBuscar.UseVisualStyleBackColor = true;
+			this.btnBuscar.UseVisualStyleBackColor = false;
 			this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
 			// 
 			// txtBusqueda
@@ -500,55 +565,6 @@
 			this.sexoTextBox.Name = "sexoTextBox";
 			this.sexoTextBox.Size = new System.Drawing.Size(104, 20);
 			this.sexoTextBox.TabIndex = 33;
-			// 
-			// dataGridViewTextBoxColumn1
-			// 
-			this.dataGridViewTextBoxColumn1.DataPropertyName = "Id";
-			this.dataGridViewTextBoxColumn1.HeaderText = "Id";
-			this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-			this.dataGridViewTextBoxColumn1.Width = 41;
-			// 
-			// dataGridViewTextBoxColumn2
-			// 
-			this.dataGridViewTextBoxColumn2.DataPropertyName = "Nombres";
-			this.dataGridViewTextBoxColumn2.HeaderText = "Nombres";
-			this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-			this.dataGridViewTextBoxColumn2.Width = 74;
-			// 
-			// dataGridViewTextBoxColumn3
-			// 
-			this.dataGridViewTextBoxColumn3.DataPropertyName = "Apellidos";
-			this.dataGridViewTextBoxColumn3.HeaderText = "Apellidos";
-			this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-			this.dataGridViewTextBoxColumn3.Width = 74;
-			// 
-			// dataGridViewTextBoxColumn4
-			// 
-			this.dataGridViewTextBoxColumn4.DataPropertyName = "Sexo";
-			this.dataGridViewTextBoxColumn4.HeaderText = "Sexo";
-			this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-			this.dataGridViewTextBoxColumn4.Width = 56;
-			// 
-			// dataGridViewTextBoxColumn6
-			// 
-			this.dataGridViewTextBoxColumn6.DataPropertyName = "Telefono";
-			this.dataGridViewTextBoxColumn6.HeaderText = "Telefono";
-			this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-			this.dataGridViewTextBoxColumn6.Width = 74;
-			// 
-			// dataGridViewTextBoxColumn7
-			// 
-			this.dataGridViewTextBoxColumn7.DataPropertyName = "Direccion";
-			this.dataGridViewTextBoxColumn7.HeaderText = "Direccion";
-			this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-			this.dataGridViewTextBoxColumn7.Width = 77;
-			// 
-			// dataGridViewCheckBoxColumn1
-			// 
-			this.dataGridViewCheckBoxColumn1.DataPropertyName = "Activo";
-			this.dataGridViewCheckBoxColumn1.HeaderText = "Activo";
-			this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
-			this.dataGridViewCheckBoxColumn1.Width = 43;
 			// 
 			// frmAlumnos
 			// 
