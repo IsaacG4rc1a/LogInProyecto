@@ -298,7 +298,7 @@
 			this.facultadIdComboBox.FormattingEnabled = true;
 			this.facultadIdComboBox.Location = new System.Drawing.Point(315, 158);
 			this.facultadIdComboBox.Name = "facultadIdComboBox";
-			this.facultadIdComboBox.Size = new System.Drawing.Size(149, 21);
+			this.facultadIdComboBox.Size = new System.Drawing.Size(246, 21);
 			this.facultadIdComboBox.TabIndex = 29;
 			this.facultadIdComboBox.ValueMember = "Id";
 			// 

@@ -213,7 +213,6 @@ namespace LogInProyecto
 				btnDocentes.Enabled = false;
 				btnAsignaturas.Enabled = false;
 				btnCarreras.Enabled = false;
-				btnReportDocentes.Enabled = false;
 			}
 		}
 

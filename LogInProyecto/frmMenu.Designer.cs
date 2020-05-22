@@ -45,7 +45,6 @@
 			this.btnAsignaturas = new System.Windows.Forms.Button();
 			this.MenuVertical = new System.Windows.Forms.Panel();
 			this.panelReportes = new System.Windows.Forms.Panel();
-			this.btnReportDocentes = new System.Windows.Forms.Button();
 			this.btnReportAlumnos = new System.Windows.Forms.Button();
 			this.btnReportMatricula = new System.Windows.Forms.Button();
 			this.btnReportes = new System.Windows.Forms.Button();
@@ -301,32 +300,13 @@
 			// panelReportes
 			// 
 			this.panelReportes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			this.panelReportes.Controls.Add(this.btnReportDocentes);
 			this.panelReportes.Controls.Add(this.btnReportAlumnos);
 			this.panelReportes.Controls.Add(this.btnReportMatricula);
 			this.panelReportes.Dock = System.Windows.Forms.DockStyle.Top;
 			this.panelReportes.Location = new System.Drawing.Point(0, 368);
 			this.panelReportes.Name = "panelReportes";
-			this.panelReportes.Size = new System.Drawing.Size(180, 108);
+			this.panelReportes.Size = new System.Drawing.Size(180, 71);
 			this.panelReportes.TabIndex = 20;
-			// 
-			// btnReportDocentes
-			// 
-			this.btnReportDocentes.BackColor = System.Drawing.Color.DarkSlateGray;
-			this.btnReportDocentes.Dock = System.Windows.Forms.DockStyle.Top;
-			this.btnReportDocentes.FlatAppearance.BorderSize = 0;
-			this.btnReportDocentes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(200)))));
-			this.btnReportDocentes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnReportDocentes.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnReportDocentes.ForeColor = System.Drawing.Color.Transparent;
-			this.btnReportDocentes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.btnReportDocentes.Location = new System.Drawing.Point(0, 69);
-			this.btnReportDocentes.Name = "btnReportDocentes";
-			this.btnReportDocentes.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-			this.btnReportDocentes.Size = new System.Drawing.Size(180, 38);
-			this.btnReportDocentes.TabIndex = 4;
-			this.btnReportDocentes.Text = "Reporte docentes";
-			this.btnReportDocentes.UseVisualStyleBackColor = false;
 			// 
 			// btnReportAlumnos
 			// 
@@ -341,7 +321,7 @@
 			this.btnReportAlumnos.Location = new System.Drawing.Point(0, 38);
 			this.btnReportAlumnos.Name = "btnReportAlumnos";
 			this.btnReportAlumnos.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
-			this.btnReportAlumnos.Size = new System.Drawing.Size(180, 31);
+			this.btnReportAlumnos.Size = new System.Drawing.Size(180, 33);
 			this.btnReportAlumnos.TabIndex = 3;
 			this.btnReportAlumnos.Text = "Reporte alumnos";
 			this.btnReportAlumnos.UseVisualStyleBackColor = false;
@@ -565,7 +545,6 @@
 		private System.Windows.Forms.Panel panelReportes;
 		private System.Windows.Forms.Button btnReportes;
 		private System.Windows.Forms.Button btnMatricula;
-		private System.Windows.Forms.Button btnReportDocentes;
 		private System.Windows.Forms.Button btnReportAlumnos;
 		private System.Windows.Forms.Button btnReportMatricula;
 		private System.Windows.Forms.Label label1;
